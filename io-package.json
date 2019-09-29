@@ -1,0 +1,77 @@
+{
+	"common": {
+		"name": "life360",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Life360",
+		"titleLang": {
+			"en": "Life360",
+			"de": "Life360",
+			"ru": "Life360",
+			"pt": "Life360",
+			"nl": "Life360",
+			"fr": "Life360",
+			"it": "Life360",
+			"es": "Life360",
+			"pl": "Life360",
+			"zh-cn": "Life360"
+		},
+		"desc": {
+			"en": "An ioBroker adapter for Life360.",
+			"de": "An ioBroker adapter for Life360.",
+			"ru": "An ioBroker adapter for Life360.",
+			"pt": "An ioBroker adapter for Life360.",
+			"nl": "An ioBroker adapter for Life360.",
+			"fr": "An ioBroker adapter for Life360.",
+			"it": "An ioBroker adapter for Life360.",
+			"es": "An ioBroker adapter for Life360.",
+			"pl": "An ioBroker adapter for Life360.",
+			"zh-cn": "An ioBroker adapter for Life360."
+		},
+		"authors": [
+			"MiGoller <1272642+MiGoller@users.noreply.github.com>"
+		],
+		"keywords": [
+			"ioBroker",
+			"template",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "life360.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/MiGoller/ioBroker.life360/master/admin/life360.png",
+		"readme": "https://github.com/MiGoller/ioBroker.life360/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "geoposition",
+		"compact": true,
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=1.4.2"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}

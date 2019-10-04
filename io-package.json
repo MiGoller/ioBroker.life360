@@ -1,8 +1,12 @@
 {
 	"common": {
 		"name": "life360",
-		"version": "0.0.1",
+		"version": "0.1.1",
 		"news": {
+			"0.1.1": {
+				"en": "First release",
+				"de": "Erstes Release"
+			},
 			"0.0.1": {
 				"en": "initial release",
 				"de": "Erstveröffentlichung",
@@ -69,9 +73,44 @@
 		]
 	},
 	"native": {
-		"option1": true,
-		"option2": "42"
+		"life360_username": "me@me.local",
+		"life360_password": "MySecretPassword",
+		"life360_phone": "",
+		"life360_countryCode": "",
+		"life360_polling_interval": "60"
 	},
 	"objects": [],
-	"instanceObjects": []
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"name": "connected",
+				"desc": "Connected to Life360 cloud services?",
+				"type": "boolean",
+				"def": "false",
+				"read": "true",
+				"role": "value.info",
+				"write": "false"
+			},
+			"native": {}
+		},
+		{
+			"_id": "circles",
+			"type": "device",
+			"common": {
+				"name": "Circles",
+				"desc": "Life360 circles."
+			},
+			"native": {}
+		}
+	]
 }

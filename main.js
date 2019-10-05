@@ -10,7 +10,6 @@ const utils = require("@iobroker/adapter-core");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
-const Promise = require("bluebird");
 
 const life360Connector = require("./lib/life360CloudConnector");
 const life360DbConnector = require("./lib/life360DbConnector");
@@ -40,11 +39,16 @@ class Life360 extends utils.Adapter {
         life360Connector.setAdapter(this);  //  Sets the adapter instance for the Life360 connector
         life360DbConnector.setAdapter(this);
 
-        // Initialize polling
+        // Setup polling Life360 cloud data
         life360Connector.setupPolling(function(err, cloud_data) {
-            life360DbConnector.publishCloudData(err, cloud_data);
+            if (!err) {
+                //  Pass the retrieved Life360 cloud data to the DB connector.
+                life360DbConnector.publishCloudData(err, cloud_data);
+            }
+            else {
+                //  Error setting up polling.
+            }
         });
-
         
         // life360Connector.setupPolling(function(err, cloud_data) {
         //     for (let oCircle in cloud_data.circles) {
@@ -167,29 +171,6 @@ class Life360 extends utils.Adapter {
     // 		}
     // 	}
     // }
-
-    /**
-     * Callback function for Life360 data poll
-     * @param {*} err Error
-     * @param {*} cloud_data Polled Life360 cloud data
-     */
-    callbackCloudDataRetrieved(err, cloud_data) {
-        if (!err) {
-            this.log.debug("Cloud data received");
-            for (let oCircle in cloud_data.circles) {
-                const circle = cloud_data.circles[oCircle];
-    
-                const members = life360Connector.getCircleMembers(circle);
-                for (let oMember in members) {
-                    let member = members[oMember].json;
-                    this.log.debug(`circle ${circle.id} - ${member.firstName}`);
-                }
-            }
-        }
-        else {
-            this.log.error(err);
-        }
-    }
 }
 
 // @ts-ignore parent is a valid property on module

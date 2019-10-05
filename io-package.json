@@ -111,6 +111,24 @@
 				"desc": "Life360 circles."
 			},
 			"native": {}
+		},
+		{
+			"_id": "places",
+			"type": "device",
+			"common": {
+				"name": "Places",
+				"desc": "Life360 places."
+			},
+			"native": {}
+		},
+		{
+			"_id": "people",
+			"type": "device",
+			"common": {
+				"name": "People",
+				"desc": "Life360 people."
+			},
+			"native": {}
 		}
 	]
 }

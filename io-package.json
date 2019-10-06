@@ -46,11 +46,11 @@
 			"zh-cn": "An ioBroker adapter for Life360."
 		},
 		"authors": [
-			"MiGoller <1272642+MiGoller@users.noreply.github.com>"
+			"migoller <goller.michael@gmail.com>"
 		],
 		"keywords": [
 			"ioBroker",
-			"template",
+			"Life360",
 			"Smart Home",
 			"home automation"
 		],

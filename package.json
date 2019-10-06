@@ -3,8 +3,8 @@
   "version": "0.1.1",
   "description": "An ioBroker adapter for Life360.",
   "author": {
-    "name": "MiGoller",
-    "email": "1272642+MiGoller@users.noreply.github.com"
+    "name": "migoller",
+    "email": "goller.michael@gmail.com"
   },
   "homepage": "https://github.com/MiGoller/ioBroker.life360",
   "license": "MIT",

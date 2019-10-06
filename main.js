@@ -49,18 +49,6 @@ class Life360 extends utils.Adapter {
                 //  Error setting up polling.
             }
         });
-        
-        // life360Connector.setupPolling(function(err, cloud_data) {
-        //     for (let oCircle in cloud_data.circles) {
-        //         const circle = cloud_data.circles[oCircle];
-
-        //         const members = life360Connector.getCircleMembers(circle);
-        //         for (let oMember in members) {
-        //             let member = members[oMember].json;
-        //             console.log(`circle ${circle.id} - ${member.firstName}`);
-        //         }
-        //     }
-        // });
 
         // The adapters config (in the instance object everything under the attribute "native") is accessible via
         // this.config:

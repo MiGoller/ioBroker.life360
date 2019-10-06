@@ -1,10 +1,10 @@
 {
   "name": "iobroker.life360",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "An ioBroker adapter for Life360.",
   "author": {
-    "name": "MiGoller",
-    "email": "1272642+MiGoller@users.noreply.github.com"
+    "name": "migoller",
+    "email": "goller.michael@gmail.com"
   },
   "homepage": "https://github.com/MiGoller/ioBroker.life360",
   "license": "MIT",
@@ -19,7 +19,9 @@
     "url": "https://github.com/MiGoller/ioBroker.life360"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^1.0.3"
+    "@iobroker/adapter-core": "^1.0.3",
+    "bluebird": "^3.5.5",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "@iobroker/testing": "^1.2.5",

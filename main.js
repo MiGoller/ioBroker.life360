@@ -117,7 +117,7 @@ class Life360 extends utils.Adapter {
         try {
             life360Connector.disablePolling();
             life360Connector.disconnect();
-
+            this.setState("info.connection", false);
             this.log.info("cleaned everything up...");
             callback();
         } catch (e) {

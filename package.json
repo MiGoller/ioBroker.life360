@@ -1,6 +1,6 @@
 {
   "name": "iobroker.life360",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "An ioBroker adapter for Life360.",
   "author": {
     "name": "migoller",
@@ -21,6 +21,7 @@
   "dependencies": {
     "@iobroker/adapter-core": "^1.0.3",
     "bluebird": "^3.5.5",
+    "geolocation-utils": "^1.2.2",
     "request": "^2.88.0"
   },
   "devDependencies": {

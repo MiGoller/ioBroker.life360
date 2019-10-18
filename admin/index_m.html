@@ -18,10 +18,58 @@
 	<script type="text/javascript" src="words.js"></script>
 
 	<script type="text/javascript">
+		var selectedPlaceIndex  = -1,
+            places              = [];
+        jQuery.fn.extend({
+            getDataValue: function (dataIndex, dataName) {
+                var elem = this.find("input[data-index='" + dataIndex + "'][data-name='" + dataName + "']");
+                return elem ? elem.val() : '';
+            },
+            setDataValue: function (dataIndex, dataName, value, raiseKeyUp = false) {
+                var elem = this.find("input[data-index='" + dataIndex + "'][data-name='" + dataName + "']");
+                elem.val(value);
+                if (raiseKeyUp) {
+                    elem.keyup();
+                }
+            },
+            initIfEmpty: function (dataIndex, dataName, initValue, raiseKeyUp = false) {
+                var tst = this.getDataValue(dataIndex, dataName);
+                if (tst == '')
+                    this.setDataValue(dataIndex, dataName, initValue, true);
+            },
+            allEmpty: function (dataIndex, dataName) {
+                for(var idx in dataName) {
+                    var tst = this.getDataValue(dataIndex, dataName[idx]);
+                    if (tst != '') {
+                        return false;
+                    }
+                }
+                return true;
+            },
+            removeRowSelection: function () {
+                this.find("tr").removeClass("selected");
+            },
+            selectRow: function (dataIndex) {
+                this.removeRowSelection();
+                this.find("input[data-index='" + dataIndex + "']:first").closest("tr").addClass("selected");
+            }
+		});
+		
 		// This will be called by the admin adapter when the settings page loads
 		function load(settings, onChange) {
 			// example: select elements with id=key and class=value and insert value
 			if (!settings) return;
+
+			settings.places = settings.places || [];
+			places = settings.places || [];
+			
+			for (var c = 0; c < settings.places.length; c++) {
+                settings.places[c].name = settings.places[c].name || '';
+                settings.places[c].latitude = settings.places[c].latitude || '';
+                settings.places[c].longitude = settings.places[c].longitude || '';
+                settings.places[c].radius = settings.places[c].radius || settings.radius;
+            }
+
 			$('.value').each(function () {
 				var $key = $(this);
 				var id = $key.attr('id');
@@ -41,6 +89,32 @@
 			onChange(false);
 			// reinitialize all the Materialize labels on the page if you are dynamically adding inputs:
 			if (M) M.updateTextFields();
+
+			//	Fill MyPlaces table
+			values2table('places', places, onChange, function () { 
+                var emptyLine = $('#tab-places').allEmpty(places.length-1, ['name','latitude','longitude','radius']);
+                if (emptyLine)
+                {
+                    selectedPlaceIndex = places.length -1 ;
+                    $('#tab-places').initIfEmpty(selectedPlaceIndex, 'name', '...', true);
+                    $('#tab-places').initIfEmpty(selectedPlaceIndex, 'latitude', systemConfig.common.latitude, true);
+                    $('#tab-places').initIfEmpty(selectedPlaceIndex, 'longitude', systemConfig.common.longitude, true);
+                    $('#tab-places').initIfEmpty(selectedPlaceIndex, 'radius', config.radius, true);
+                    $("#tab-places").selectRow(selectedPlaceIndex);
+                    updateMap(true);
+                }
+			});
+
+			//	Fill dropdown for Places-adapter instances
+			getAdapterInstances('places', function (list) {
+				for (var i = 0; i < list.length; i++) {
+					var _id = list[i]._id.replace('system.adapter.', '');
+                    $('#sendto_places_adapter_instance').append('<option value="' + _id.replace('places.', '') + '">' + _id + '</option>');
+                }
+                $('#sendto_places_adapter_instance.value').val(settings.sendto_places_adapter_instance).select();
+			});
+			
+			$('#location_object_type.value').val(settings.location_object_type).select();
 		}
 
 		// This will be called by the admin adapter when the user presses the save button
@@ -55,6 +129,12 @@
 					obj[$this.attr('id')] = $this.val();
 				}
 			});
+
+			obj.places = table2values('places');
+            for (var c = 0; c < obj.places.length; c++) {
+                obj.places[c].radius = obj.places[c].radius || config.radius;
+			}
+			
 			callback(obj);
 		}
 	</script>
@@ -65,37 +145,137 @@
 
 	<div class="m adapter-container">
 
-		<div class="row">
-			<div class="col s12 m4 l2">
-				<img src="life360.png" class="logo">
-			</div>
-		</div>
-
 		<!-- Put your content here -->
+		<div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3">
+                    <a href="#tab-main" class="translate active">TAB_GENERAL</a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#tab-places" class="translate">TAB_MYPLACES</a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#tab-integration" class="translate">TAB_INTEGRATION</a>
+                </li>
+            </ul>
+		</div>
+		
+		<div id="tab-main" class="col s12 page">
+			<div class="row">
+				<div class="col s12 m4 l2">
+					<img src="life360.png" class="logo">
+				</div>
+			</div>
 
-		<div class="row">
-			<div class="col s6 input-field">
-				<input type="text" class="value" id="life360_username" />
-				<label for="life360_username" class="translate">Life360 email address</label>
+			<div class="row">
+				<div class="col s6 input-field">
+					<input type="text" class="value" id="life360_username" />
+					<label for="life360_username" class="translate">LIFE360_USERNAME</label>
+				</div>
+				<div class="col s6 input-field">
+					<input type="password" class="value" id="life360_password" />
+					<label for="life360_password" class="translate">LIFE360_PASSWORD</label>
+				</div>
 			</div>
-			<div class="col s6 input-field">
-				<input type="password" class="value" id="life360_password" />
-				<label for="life360_password" class="translate">Life360 password</label>
+			<div class="row">
+				<div class="col s6 input-field">
+					<input type="text" class="value" id="life360_countryCode" />
+					<label for="life360_countryCode" class="translate">LIFE360_COUNTRYCODE</label>
+				</div>
+				<div class="col s6 input-field">
+					<input type="text" class="value" id="life360_phone" />
+					<label for="life360_phone" class="translate">LIFE360_PHONE</label>
+				</div>
 			</div>
-			<div class="col s6 input-field">
-				<input type="text" class="value" id="life360_countryCode" />
-				<label for="life360_countryCode" class="translate">Life360 phone countrycode</label>
-			</div>
-			<div class="col s6 input-field">
-				<input type="text" class="value" id="life360_phone" />
-				<label for="life360_phone" class="translate">Life360 phone number</label>
-			</div>
-			<div class="col s6 input-field">
-				<input type="text" class="value" id="life360_polling_interval" />
-				<label for="life360_polling_interval" class="translate">Life360 polling interval (sec.)</label>
+			<div class="row">
+				<div class="col s6 input-field">
+					<input type="number" class="value" id="life360_polling_interval" min="15" max="1440"/>
+					<label for="life360_polling_interval" class="translate">LIFE360_POLLING_INTERVAL</label>
+				</div>
 			</div>
 		</div>
 
+		<div id="tab-places" class="col s12 page">
+			<div class="row top-padding">
+				<div class="col s12 m8">
+					<div class="col s12" id="places">
+						<div class="table-values-div">
+							<table class="table-values">
+								<thead>
+									<tr>
+										<th data-name="name" class="translate">PLACE_NAME</th>
+										<th data-name="latitude" class="translate">PLACE_LATITUDE</th>
+										<th data-name="longitude" class="translate">PLACE_LONGITUDE</th>
+										<th data-name="radius" data-type="number" class="translate">PLACE_RADIUS</th>
+										<th data-buttons="edit up down delete"></th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<a class="btn-floating waves-effect waves-light blue table-button-add">
+							<i class="material-icons">add</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="tab-integration" class="col s12 page">
+			<div class="section">
+				<h5 class="translate">Life360 data</h5>
+				<div class="row">
+					<div class="input-field col s4">
+						<input type="checkbox" class="value" id="process_life360_circles" />
+						<label for="process_life360_circles" class="translate">PROCESS_LIFE360_CIRCLES</label>
+					</div>
+					<div class="input-field col s4">
+						<input type="checkbox" class="value" id="process_life360_places" />
+						<label for="process_life360_places" class="translate">PROCESS_LIFE360_PLACES</label>
+					</div>
+					<div class="input-field col s4">
+						<input type="checkbox" class="value" id="process_life360_people" />
+						<label for="process_life360_people" class="translate">PROCESS_LIFE360_PEOPLE</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="divider"></div>
+			<div class="section">
+				<h5 class="translate">Places-adapter</h5>
+				<div class="row">
+					<div class="input-field col s4">
+						<select class="value" id="sendto_places_adapter_instance">
+							<option value="-1" class="translate">SENDTO_PLACES_ADAPTER_INSTANCE_NONE</option>
+						</select>
+						<label class="translate" for="sendto_places_adapter_instance">SENDTO_PLACES_ADAPTER_INSTANCE</label>
+					</div>
+					<div class="input-field col s8">
+							<input type="text" class="value" id="sendto_places_adapter_regexp" />
+							<label for="sendto_places_adapter_regexp" class="translate">SENDTO_PLACES_ADAPTER_REGEXP</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="divider"></div>
+			<div class="section">
+				<h5 class="translate">Location-tracking</h5>
+				<div class="row">
+					<div class="input-field col s4">
+						<input type="checkbox" class="value" id="track_location_people" />
+						<label for="track_location_people" class="translate">TRACK_LOCATION_PEOPLE</label>
+					</div>
+					<div class="input-field col s4">
+						<select class="value" id="location_object_type">
+							<option value="LonLatTuple" class="translate">LonLatTuple</option>
+							<option value="LatLon" class="translate">LatLon</option>
+							<option value="LatLng" class="translate">LatLng</option>
+							<option value="LatitudeLongitude" class="translate">LatitudeLongitude</option>
+						</select>
+						<label class="translate" for="location_object_type">LOCATION_OBJECT_TYPE</label>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </body>

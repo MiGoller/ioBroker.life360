@@ -1,3 +1,11 @@
 {
-	"eslint.enable": true
+	"eslint.enable": true,
+	"spellright.language": [
+		"en"
+	],
+	"spellright.documentTypes": [
+		"latex",
+		"plaintext",
+		"markdown"
+	]
 }

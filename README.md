@@ -20,20 +20,81 @@ This adapter connects to the [Life360](https://www.life360.com) cloud services t
 
 ## Installation
 
-Right now you'll have to add the adapter to your ioBroker using a custom url pointing to the corresponding [GitHub](https://github.com/) repository at https://github.com/MiGoller/ioBroker.life360/tree/master .
+Right now you'll have to add the adapter to your ioBroker using a custom URL pointing to the corresponding [GitHub](https://github.com/) repository at https://github.com/MiGoller/ioBroker.life360/tree/master .
 
 ## Configuration
 
+
+
+### Life360 cloud services
+
 You'll have to setup the adapter with your personal [Life360](https://www.life360.com) credentials to let the adapter poll the information from the cloud services. You can login with your mobile phone number or your email-address (recommended) for Life360, but in any case you'll have to set the password to your personal Life360 password.
 
-Feel free to modify the default timespan of 60 seconds for the polling interval. The adapter does not allow modifying the interval to less than 15 seconds to prevent gaining any rate limits and to prevent ioBroker Admin getting slower and slower.
+![Logo](admin/ioBroker.life360.settings.life360.png)
+
+- Either enter your email address or your country code and mobile phone number.
+
+- Feel free to modify the default timespan of 60 seconds for the polling interval. The polling interval must be 15 seconds or more.
+
+### My Places
+
+You can add your own places apart from the Life360 places to your adapter instance. "My Places" let you define private places that are not public to the Life360 cloud services. The adapter checks which persons are present at your private places on every Life360 data poll. 
+
+![Logo](admin/ioBroker.life360.settings.myplaces.png)
+
+The places' setup happens the same way as with the Places-adapter:
+- Define a ```Name``` for the place.
+
+- Set the geo-position data for the place (latitude and longitude).
+
+- Set the place's radius in meters.
+
+#### Why should I use My Places apart from Life360 places?
+- My Places are private! Life360 will not know about them.
+
+- People can be present at more than one place at the same point of time. For example you can be present at your "home" place and your "neighborhood" place at the same time.
+
+- You can set the place's radius without any limitations (minimum value).
+
+### Integration
+
+The Life360 cloud services provide a lot of information about the circles, places and people. You have the freedom of choice. You device which data will be available to your ioBroker installation.
+
+![Logo](admin/ioBroker.life360.settings.integration.png)
+
+#### Life360 data
+
+Select the Life360 data you want the adapter to push to ioBroker data points.
+- Enable processing of ```Life360 circles``` for information regarding the circles, the circles' places and the circles' members. You will get a lot of information regarding the circles, but only essential information about places and people.
+
+- Enable processing of ```Life360 places``` for detailed information regarding any Life360 circle, you are a member of.
+
+- Enable processing of ```Life360 people``` for detailed information about any Life360 person, who are members of the circles you are a member of.
+
+#### Send location data to Places-adapter
+
+The ioBroker.life360 adapter let you send location data for known Life360 people to an instance of the Places-adapter.
+- Select an instance of the Places-adapter as a receiver for the location data. Select ```None``` to disable sending of location data.
+- You can include or exclude people using regular expression patterns. The adapter will check if the string ```[Firstname] [Lastname]``` matches your pattern. Set pattern to empty string to disable regex filtering.
+
+#### Location-Tracking
+
+You can activate location-tracking for all people. Location-tracking will add geo-positioning details to the people information.
+- Check to activate location-tracking.
+
+- Set the geo-location object-type to push combined latitude and longitude values.
 
 ## Disclaimer
 I did not find any official documentation for the [Life360](https://www.life360.com) REST APIs. Apparently [Life360](https://www.life360.com) does not support the use of the REST API for other applications than its own ones.
 
 My REST API integration is based on reverse engineering done by the open source community and an API token discovered on [Life360](https://www.life360.com) code which is public available. [Life360](https://www.life360.com) could disable or modify this API token or change its REST API in a way that this adapter will not work as expected anymore.
 
+Feel free to modify the default timespan of 60 seconds for the polling interval. The adapter does not allow modifying the interval to less than 15 seconds to prevent gaining any rate limits and to prevent ioBroker Admin getting slower and slower.
+
 ## Changelog
+
+### 0.2.1
+* (migoller) MyPlaces: Add additional places apart from the Life360 ones.
 
 ### 0.1.1
 * (migoller) First alpha release

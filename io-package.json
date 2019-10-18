@@ -1,134 +1,170 @@
 {
-	"common": {
-		"name": "life360",
-		"version": "0.1.1",
-		"news": {
-			"0.1.1": {
-				"en": "First release",
-				"de": "Erstes Release"
-			},
-			"0.0.1": {
-				"en": "initial release",
-				"de": "Erstveröffentlichung",
-				"ru": "Начальная версия",
-				"pt": "lançamento inicial",
-				"nl": "Eerste uitgave",
-				"fr": "Première version",
-				"it": "Versione iniziale",
-				"es": "Versión inicial",
-				"pl": "Pierwsze wydanie",
-				"zh-cn": "首次出版"
-			}
-		},
-		"title": "Life360",
-		"titleLang": {
-			"en": "Life360",
-			"de": "Life360",
-			"ru": "Life360",
-			"pt": "Life360",
-			"nl": "Life360",
-			"fr": "Life360",
-			"it": "Life360",
-			"es": "Life360",
-			"pl": "Life360",
-			"zh-cn": "Life360"
-		},
-		"desc": {
-			"en": "An ioBroker adapter for Life360.",
-			"de": "An ioBroker adapter for Life360.",
-			"ru": "An ioBroker adapter for Life360.",
-			"pt": "An ioBroker adapter for Life360.",
-			"nl": "An ioBroker adapter for Life360.",
-			"fr": "An ioBroker adapter for Life360.",
-			"it": "An ioBroker adapter for Life360.",
-			"es": "An ioBroker adapter for Life360.",
-			"pl": "An ioBroker adapter for Life360.",
-			"zh-cn": "An ioBroker adapter for Life360."
-		},
-		"authors": [
-			"migoller <goller.michael@gmail.com>"
-		],
-		"keywords": [
-			"ioBroker",
-			"Life360",
-			"Smart Home",
-			"home automation"
-		],
-		"license": "MIT",
-		"platform": "Javascript/Node.js",
-		"main": "main.js",
-		"icon": "life360.png",
-		"enabled": true,
-		"extIcon": "https://raw.githubusercontent.com/MiGoller/ioBroker.life360/master/admin/life360.png",
-		"readme": "https://github.com/MiGoller/ioBroker.life360/blob/master/README.md",
-		"loglevel": "info",
-		"mode": "daemon",
-		"type": "geoposition",
-		"compact": true,
-		"materialize": true,
-		"dependencies": [
-			{
-				"js-controller": ">=1.4.2"
-			}
-		]
-	},
-	"native": {
-		"life360_username": "me@me.local",
-		"life360_password": "MySecretPassword",
-		"life360_phone": "",
-		"life360_countryCode": "",
-		"life360_polling_interval": "60"
-	},
-	"objects": [],
-	"instanceObjects": [
-		{
-			"_id": "info",
-			"type": "channel",
-			"common": {
-				"name": "Information"
-			},
-			"native": {}
-		},
-		{
-			"_id": "info.connection",
-			"type": "state",
-			"common": {
-				"name": "connected",
-				"desc": "Connected to Life360 cloud services?",
-				"type": "boolean",
-				"def": "false",
-				"read": "true",
-				"role": "value.info",
-				"write": "false"
-			},
-			"native": {}
-		},
-		{
-			"_id": "circles",
-			"type": "device",
-			"common": {
-				"name": "Circles",
-				"desc": "Life360 circles."
-			},
-			"native": {}
-		},
-		{
-			"_id": "places",
-			"type": "device",
-			"common": {
-				"name": "Places",
-				"desc": "Life360 places."
-			},
-			"native": {}
-		},
-		{
-			"_id": "people",
-			"type": "device",
-			"common": {
-				"name": "People",
-				"desc": "Life360 people."
-			},
-			"native": {}
-		}
-	]
+    "common": {
+        "name": "life360",
+        "version": "0.2.1",
+        "news": {
+            "0.2.1": {
+                "en": "MyPlaces: Add additional places apart from the Life360 ones.",
+                "de": "MyPlaces: Fügen Sie neben den Life360-Orten weitere hinzu.",
+                "ru": "MyPlaces: добавьте дополнительные места помимо Life360.",
+                "pt": "MyPlaces: adicione outros locais além dos Life360.",
+                "nl": "MyPlaces: voeg extra plaatsen toe, behalve de Life360.",
+                "fr": "MyPlaces: Ajoutez des lieux supplémentaires en dehors de Life360.",
+                "it": "MyPlaces: aggiungi altri posti oltre a quelli di Life360.",
+                "es": "MyPlaces: agregue lugares adicionales además de los Life360.",
+                "pl": "MyPlaces: Dodaj dodatkowe miejsca oprócz Life360.",
+                "zh-cn": "MyPlaces：添加除Life360之外的其他地方。"
+            },
+            "0.1.1": {
+                "en": "First release",
+                "de": "Erstes Release",
+                "ru": "Первый выпуск",
+                "pt": "Primeiro lançamento",
+                "nl": "Eerste uitgave",
+                "fr": "Première sortie",
+                "it": "Prima uscita",
+                "es": "Primer lanzamiento",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "初版"
+            },
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Life360",
+        "titleLang": {
+            "en": "Life360",
+            "de": "Life360",
+            "ru": "Life360",
+            "pt": "Life360",
+            "nl": "Life360",
+            "fr": "Life360",
+            "it": "Life360",
+            "es": "Life360",
+            "pl": "Life360",
+            "zh-cn": "Life360"
+        },
+        "desc": {
+            "en": "An ioBroker adapter for Life360.",
+            "de": "An ioBroker adapter for Life360.",
+            "ru": "An ioBroker adapter for Life360.",
+            "pt": "An ioBroker adapter for Life360.",
+            "nl": "An ioBroker adapter for Life360.",
+            "fr": "An ioBroker adapter for Life360.",
+            "it": "An ioBroker adapter for Life360.",
+            "es": "An ioBroker adapter for Life360.",
+            "pl": "An ioBroker adapter for Life360.",
+            "zh-cn": "An ioBroker adapter for Life360."
+        },
+        "authors": [
+            "migoller <goller.michael@gmail.com>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "Life360",
+            "Smart Home",
+            "home automation"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "life360.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/MiGoller/ioBroker.life360/master/admin/life360.png",
+        "readme": "https://github.com/MiGoller/ioBroker.life360/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "geoposition",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "life360_username": "me@me.local",
+        "life360_password": "MySecretPassword",
+        "life360_phone": "",
+        "life360_countryCode": "",
+        "life360_polling_interval": "60",
+        "sendto_places_adapter_instance": -1,
+        "sendto_places_adapter_regexp": "",
+        "track_location_people": true,
+        "location_object_type": "LatLng",
+        "process_life360_circles": true,
+        "process_life360_places": true,
+        "process_life360_people": true
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "name": "connected",
+                "desc": "Connected to Life360 cloud services?",
+                "type": "boolean",
+                "def": "false",
+                "read": "true",
+                "role": "value.info",
+                "write": "false"
+            },
+            "native": {}
+        },
+        {
+            "_id": "circles",
+            "type": "channel",
+            "common": {
+                "name": "Circles",
+                "desc": "Life360 circles."
+            },
+            "native": {}
+        },
+        {
+            "_id": "places",
+            "type": "channel",
+            "common": {
+                "name": "Places",
+                "desc": "Life360 places."
+            },
+            "native": {}
+        },
+        {
+            "_id": "people",
+            "type": "channel",
+            "common": {
+                "name": "People",
+                "desc": "Life360 people."
+            },
+            "native": {}
+        },
+        {
+            "_id": "myplaces",
+            "type": "channel",
+            "common": {
+                "name": "My Places",
+                "desc": "Custom places apart from Life360."
+            },
+            "native": {}
+        }
+    ]
 }

@@ -11,6 +11,7 @@
     "Life360 data": "Dane Life360",
     "Location-tracking": "Śledzenie lokalizacji",
     "LonLatTuple": "Krotka LonLat",
+    "PLACE_CIRCLE": "Koło (opcjonalnie)",
     "PLACE_LATITUDE": "Szerokość",
     "PLACE_LONGITUDE": "Długość geograficzna",
     "PLACE_NAME": "Imię",

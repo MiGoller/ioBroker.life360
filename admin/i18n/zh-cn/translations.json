@@ -11,6 +11,7 @@
     "Life360 data": "Life360数据",
     "Location-tracking": "位置追踪",
     "LonLatTuple": "LonLat元组",
+    "PLACE_CIRCLE": "圆（可选）",
     "PLACE_LATITUDE": "纬度",
     "PLACE_LONGITUDE": "经度",
     "PLACE_NAME": "名称",

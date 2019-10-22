@@ -67,7 +67,8 @@
                 settings.places[c].name = settings.places[c].name || '';
                 settings.places[c].latitude = settings.places[c].latitude || '';
                 settings.places[c].longitude = settings.places[c].longitude || '';
-                settings.places[c].radius = settings.places[c].radius || settings.radius;
+				settings.places[c].radius = settings.places[c].radius || settings.radius;
+				settings.places[c].circle = settings.places[c].circle || '';
             }
 
 			$('.value').each(function () {
@@ -92,16 +93,16 @@
 
 			//	Fill MyPlaces table
 			values2table('places', places, onChange, function () { 
-                var emptyLine = $('#tab-places').allEmpty(places.length-1, ['name','latitude','longitude','radius']);
+                var emptyLine = $('#tab-places').allEmpty(places.length-1, ['name','latitude','longitude','radius','circle']);
                 if (emptyLine)
                 {
                     selectedPlaceIndex = places.length -1 ;
                     $('#tab-places').initIfEmpty(selectedPlaceIndex, 'name', '...', true);
                     $('#tab-places').initIfEmpty(selectedPlaceIndex, 'latitude', systemConfig.common.latitude, true);
                     $('#tab-places').initIfEmpty(selectedPlaceIndex, 'longitude', systemConfig.common.longitude, true);
-                    $('#tab-places').initIfEmpty(selectedPlaceIndex, 'radius', config.radius, true);
+					$('#tab-places').initIfEmpty(selectedPlaceIndex, 'radius', config.radius, true);
+					$('#tab-places').initIfEmpty(selectedPlaceIndex, 'circle', '', true);
                     $("#tab-places").selectRow(selectedPlaceIndex);
-                    updateMap(true);
                 }
 			});
 
@@ -207,6 +208,7 @@
 										<th data-name="latitude" class="translate">PLACE_LATITUDE</th>
 										<th data-name="longitude" class="translate">PLACE_LONGITUDE</th>
 										<th data-name="radius" data-type="number" class="translate">PLACE_RADIUS</th>
+										<th data-name="circle" class="translate"></th>
 										<th data-buttons="edit up down delete"></th>
 									</tr>
 								</thead>

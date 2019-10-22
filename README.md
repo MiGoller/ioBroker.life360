@@ -93,6 +93,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.2
+* (migoller) The adapter will remove stale datapoints.
+
 ### 0.2.1
 * (migoller) MyPlaces: Add additional places apart from the Life360 ones.
 

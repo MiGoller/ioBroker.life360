@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.1",
+        "version": "0.2.2",
         "news": {
+            "0.2.2": {
+                "en": "The adapter will remove stale datapoints.",
+                "de": "Der Adapter entfernt veraltete Datenpunkte.",
+                "ru": "Адаптер удалит устаревшие точки данных.",
+                "pt": "O adaptador removerá pontos de dados antigos.",
+                "nl": "De adapter verwijdert verouderde datapunten.",
+                "fr": "L'adaptateur supprimera les points de données périmés.",
+                "it": "L'adattatore rimuoverà punti dati non aggiornati.",
+                "es": "El adaptador eliminará los puntos de datos obsoletos.",
+                "pl": "Adapter usunie przestarzałe punkty danych.",
+                "zh-cn": "适配器将删除陈旧的数据点。"
+            },
             "0.2.1": {
                 "en": "MyPlaces: Add additional places apart from the Life360 ones.",
                 "de": "MyPlaces: Fügen Sie neben den Life360-Orten weitere hinzu.",
@@ -78,7 +90,7 @@
         "platform": "Javascript/Node.js",
         "main": "main.js",
         "icon": "life360.png",
-        "enabled": true,
+        "enabled": false,
         "extIcon": "https://raw.githubusercontent.com/MiGoller/ioBroker.life360/master/admin/life360.png",
         "readme": "https://github.com/MiGoller/ioBroker.life360/blob/master/README.md",
         "loglevel": "info",
@@ -86,6 +98,7 @@
         "type": "geoposition",
         "compact": true,
         "materialize": true,
+        "stopTimeout ": 3000,
         "dependencies": [
             {
                 "js-controller": ">=1.4.2"
@@ -132,7 +145,7 @@
         },
         {
             "_id": "circles",
-            "type": "channel",
+            "type": "device",
             "common": {
                 "name": "Circles",
                 "desc": "Life360 circles."
@@ -141,7 +154,7 @@
         },
         {
             "_id": "places",
-            "type": "channel",
+            "type": "device",
             "common": {
                 "name": "Places",
                 "desc": "Life360 places."
@@ -150,7 +163,7 @@
         },
         {
             "_id": "people",
-            "type": "channel",
+            "type": "device",
             "common": {
                 "name": "People",
                 "desc": "Life360 people."
@@ -159,7 +172,7 @@
         },
         {
             "_id": "myplaces",
-            "type": "channel",
+            "type": "device",
             "common": {
                 "name": "My Places",
                 "desc": "Custom places apart from Life360."

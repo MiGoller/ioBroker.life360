@@ -11,6 +11,7 @@
     "Life360 data": "Данные Life360",
     "Location-tracking": "Расположение слежения",
     "LonLatTuple": "Кортеж LonLat",
+    "PLACE_CIRCLE": "Круг (необязательно)",
     "PLACE_LATITUDE": "широта",
     "PLACE_LONGITUDE": "Долгота",
     "PLACE_NAME": "имя",

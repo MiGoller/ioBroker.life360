@@ -11,6 +11,7 @@
     "Life360 data": "Life360-gegevens",
     "Location-tracking": "Locatie tracking",
     "LonLatTuple": "LonLat tuple",
+    "PLACE_CIRCLE": "Cirkel (optioneel)",
     "PLACE_LATITUDE": "Breedtegraad",
     "PLACE_LONGITUDE": "Lengtegraad",
     "PLACE_NAME": "Naam",

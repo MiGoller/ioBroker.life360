@@ -93,6 +93,12 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.4
+* (migoller) Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.
+
+### 0.2.3
+* (migoller) Added simple integrity checks for Life360 data.
+
 ### 0.2.2
 * (migoller) The adapter will remove stale datapoints.
 

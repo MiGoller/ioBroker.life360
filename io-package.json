@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.3",
+        "version": "0.2.4",
         "news": {
+            "0.2.4": {
+                "en": "Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.",
+                "de": "Bereinigen Sie veraltete Datenpunkte nach 30 Tagen, um zu verhindern, dass Datenpunkte entfernt werden, wenn Life360 nicht verfügbar ist.",
+                "ru": "Очистите устаревшие точки данных через 30 дней, чтобы предотвратить удаление точек данных, когда Life360 недоступен.",
+                "pt": "Limpe os pontos de dados antigos após 30 dias para evitar a remoção de pontos de dados quando o Life360 não estiver disponível.",
+                "nl": "Ruim oude datapunten op na 30 dagen om te voorkomen dat datapunten worden verwijderd wanneer Life360 niet beschikbaar is.",
+                "fr": "Nettoyez les points de données périmés après 30 jours pour éviter de les supprimer lorsque Life360 n’est pas disponible.",
+                "it": "Elimina i punti dati non aggiornati dopo 30 giorni per impedire la rimozione dei punti dati quando Life360 non è disponibile.",
+                "es": "Limpie los puntos de datos obsoletos después de 30 días para evitar la eliminación de puntos de datos cuando Life360 no esté disponible.",
+                "pl": "Wyczyść nieaktualne punkty danych po 30 dniach, aby zapobiec ich usuwaniu, gdy Life360 nie jest dostępny.",
+                "zh-cn": "30天后清理陈旧的数据点，以防止在Life360不可用时删除数据点。"
+            },
             "0.2.3": {
                 "en": "Added simple integrity checks for Life360 data.",
                 "de": "Einfache Integritätsprüfungen für Life360-Daten hinzugefügt.",

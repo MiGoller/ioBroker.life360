@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.2",
+        "version": "0.2.3",
         "news": {
+            "0.2.3": {
+                "en": "Added simple integrity checks for Life360 data.",
+                "de": "Einfache Integritätsprüfungen für Life360-Daten hinzugefügt.",
+                "ru": "Добавлены простые проверки целостности данных Life360.",
+                "pt": "Adicionadas verificações simples de integridade dos dados Life360.",
+                "nl": "Eenvoudige integriteitscontroles voor Life360-gegevens toegevoegd.",
+                "fr": "Ajout de simples contrôles d'intégrité pour les données Life360.",
+                "it": "Aggiunti semplici controlli di integrità per i dati Life360.",
+                "es": "Se agregaron verificaciones de integridad simples para los datos de Life360.",
+                "pl": "Dodano proste kontrole integralności danych Life360.",
+                "zh-cn": "添加了对Life360数据的简单完整性检查。"
+            },
             "0.2.2": {
                 "en": "The adapter will remove stale datapoints.",
                 "de": "Der Adapter entfernt veraltete Datenpunkte.",

@@ -1,8 +1,11 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.4",
+        "version": "0.2.5",
         "news": {
+            "0.2.5": {
+                "en": ""
+            },
             "0.2.4": {
                 "en": "Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.",
                 "de": "Bereinigen Sie veraltete Datenpunkte nach 30 Tagen, um zu verhindern, dass Datenpunkte entfernt werden, wenn Life360 nicht verfügbar ist.",

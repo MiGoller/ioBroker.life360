@@ -1,14 +1,13 @@
 ![Logo](admin/life360.png)
 # ioBroker.life360
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
+[![NPM version](https://img.shields.io/npm/v/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
 [![Dependency Status](https://img.shields.io/david/MiGoller/iobroker.life360.svg)](https://david-dm.org/MiGoller/iobroker.life360)
 [![Known Vulnerabilities](https://snyk.io/test/github/MiGoller/ioBroker.life360/badge.svg)](https://snyk.io/test/github/MiGoller/ioBroker.life360)
+[![Travis-CI](https://img.shields.io/travis/MiGoller/ioBroker.life360/master.svg)](https://travis-ci.org/MiGoller/ioBroker.life360)
 
 [![NPM](https://nodei.co/npm/iobroker.life360.png?downloads=true)](https://nodei.co/npm/iobroker.life360/)
-
-**Tests:**: [![Travis-CI](http://img.shields.io/travis/MiGoller/ioBroker.life360/master.svg)](https://travis-ci.org/MiGoller/ioBroker.life360)
 
 ## Life360 adapter for ioBroker
 
@@ -22,9 +21,26 @@ This adapter connects to the [Life360](https://www.life360.com) cloud services t
 
 Right now you'll have to add the adapter to your ioBroker using a custom URL pointing to the corresponding [GitHub](https://github.com/) repository at https://github.com/MiGoller/ioBroker.life360/tree/master .
 
+### Install the Node JS package on the commandline
+
+If you don't want to install the adapter using the web UI or if you want to install a special version, including development version, you can do so on the command line.
+
+1. Login to your ioBroker host
+2. Switch to ioBroker's installation directory (defaults to `/opt/iobroker`)
+3. Run the following commands
+    ```
+    npm install migoller/iobroker.life360
+    iobroker upload life360
+    ```
+4. Add an instance using the web UI
+
+If you want to install the development version just type ...
+```
+npm install migoller/iobroker.life360#develop
+iobroker upload life360
+```
+
 ## Configuration
-
-
 
 ### Life360 cloud services
 
@@ -32,7 +48,7 @@ You'll have to setup the adapter with your personal [Life360](https://www.life36
 
 ![Logo](admin/ioBroker.life360.settings.life360.png)
 
-- Either enter your email address or your country code and mobile phone number.
+- Either enter your email address **OR** your country code and mobile phone number. **Do NOT enter email address and mobile phone information !**
 
 - Feel free to modify the default timespan of 60 seconds for the polling interval. The polling interval must be 15 seconds or more.
 
@@ -92,6 +108,10 @@ My REST API integration is based on reverse engineering done by the open source 
 Feel free to modify the default timespan of 60 seconds for the polling interval. The adapter does not allow modifying the interval to less than 15 seconds to prevent gaining any rate limits and to prevent ioBroker Admin getting slower and slower.
 
 ## Changelog
+
+### 0.2.5
+* (migoller) Bug fix for issue #9: check Adapter with js-controller 3.0.x.
+* (migoller) Updated packages and dependencies.
 
 ### 0.2.4
 * (migoller) Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.

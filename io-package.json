@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.4",
+        "version": "0.2.5",
         "news": {
+            "0.2.5": {
+                "en": "Bug fix for issue #9: check Adapter with js-controller 3.0.x.",
+                "de": "Fehlerbehebung für Problem Nr. 9: Überprüfen Sie den Adapter mit js-controller 3.0.x.",
+                "ru": "Исправление ошибки для проблемы № 9: проверьте адаптер с помощью js-controller 3.0.x.",
+                "pt": "Correção de bug para o problema # 9: verifique o Adaptador com o js-controller 3.0.x.",
+                "nl": "Bugfix voor probleem # 9: controleer Adapter met js-controller 3.0.x.",
+                "fr": "Correction d'un bug pour le problème # 9: vérifiez l'adaptateur avec js-controller 3.0.x.",
+                "it": "Correzione di bug per il problema n. 9: controllare l'adattatore con js-controller 3.0.x.",
+                "es": "Corrección de errores para el problema # 9: verifique el Adaptador con js-controller 3.0.x.",
+                "pl": "Poprawka błędu dla problemu nr 9: sprawdź Adapter z kontrolerem js 3.0.x.",
+                "zh-cn": "问题9的错误修复：使用js-controller 3.0.x检查适配器。"
+            },
             "0.2.4": {
                 "en": "Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.",
                 "de": "Bereinigen Sie veraltete Datenpunkte nach 30 Tagen, um zu verhindern, dass Datenpunkte entfernt werden, wenn Life360 nicht verfügbar ist.",
@@ -160,10 +172,10 @@
                 "name": "connected",
                 "desc": "Connected to Life360 cloud services?",
                 "type": "boolean",
-                "def": "false",
-                "read": "true",
+                "def": false,
+                "read": true,
                 "role": "value.info",
-                "write": "false"
+                "write": false
             },
             "native": {}
         },

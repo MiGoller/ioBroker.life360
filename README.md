@@ -29,15 +29,13 @@ If you don't want to install the adapter using the web UI or if you want to inst
 2. Switch to ioBroker's installation directory (defaults to `/opt/iobroker`)
 3. Run the following commands
     ```
-    npm install migoller/iobroker.life360
-    iobroker upload life360
+    	iobroker npm install migoller/iobroker.life360 --loglevel error --prefix "/opt/iobroker"
     ```
 4. Add an instance using the web UI
 
 If you want to install the development version just type ...
 ```
-npm install migoller/iobroker.life360#develop
-iobroker upload life360
+	iobroker npm install migoller/iobroker.life360#develop --loglevel error --prefix "/opt/iobroker"
 ```
 
 ## Configuration

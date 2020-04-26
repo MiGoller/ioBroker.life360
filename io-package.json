@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.5",
+        "version": "0.2.6",
         "news": {
+            "0.2.6": {
+                "en": "Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null",
+                "de": "Fehlerbehebung für Problem Nr. 12: Nicht erfasste Ausnahme: Die Eigenschaft 'timestamp' von null kann nicht gelesen werden",
+                "ru": "Исправление ошибки для проблемы № 12: необработанное исключение: невозможно прочитать свойство 'timestamp' из null",
+                "pt": "Correção de bug para o problema 12: Exceção não capturada: Não é possível ler a propriedade 'timestamp' de null",
+                "nl": "Bugfix voor probleem # 12: niet-afgevangen uitzondering: kan eigenschap 'tijdstempel' van null niet lezen",
+                "fr": "Correction d'un bug pour le problème # 12: exception non interceptée: impossible de lire la propriété «horodatage» de null",
+                "it": "Correzione di bug per il problema n. 12: eccezione non rilevata: impossibile leggere la proprietà 'timestamp' di null",
+                "es": "Corrección de errores para el problema # 12: excepción no detectada: no se puede leer la propiedad 'marca de tiempo' de nulo",
+                "pl": "Poprawka błędu dla problemu nr 12: Nieprzechwycony wyjątek: Nie można odczytać właściwości „znacznik czasu” wartości null",
+                "zh-cn": "问题12的错误修复：未捕获的异常：无法读取null的属性“时间戳”"
+            },
             "0.2.5": {
                 "en": "Bug fix for issue #9: check Adapter with js-controller 3.0.x.",
                 "de": "Fehlerbehebung für Problem Nr. 9: Überprüfen Sie den Adapter mit js-controller 3.0.x.",

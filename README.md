@@ -21,7 +21,7 @@ This adapter connects to the [Life360](https://www.life360.com) cloud services t
 
 Right now you'll have to add the adapter to your ioBroker using a custom URL pointing to the corresponding [GitHub](https://github.com/) repository at https://github.com/MiGoller/ioBroker.life360/tree/master .
 
-### Install the Node JS package on the commandline
+### Install the Node JS package on the command line
 
 If you don't want to install the adapter using the web UI or if you want to install a special version, including development version, you can do so on the command line.
 

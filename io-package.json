@@ -1,8 +1,11 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.6",
+        "version": "0.2.7",
         "news": {
+            "0.2.7": {
+                "en": "Upgraded lodash from 4.17.15 to 4.17.19"
+            },
             "0.2.6": {
                 "en": "Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null",
                 "de": "Fehlerbehebung für Problem Nr. 12: Nicht erfasste Ausnahme: Die Eigenschaft 'timestamp' von null kann nicht gelesen werden",

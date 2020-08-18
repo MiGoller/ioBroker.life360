@@ -107,27 +107,36 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.8
+* (MiGoller) Upgraded several packages to wanted versions.
+
+### 0.2.7
+* (MiGoller) Upgraded lodash from 4.17.15 to 4.17.19
+
+### 0.2.6
+* (MiGoller) Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null
+
 ### 0.2.5
-* (migoller) Bug fix for issue #9: check Adapter with js-controller 3.0.x.
-* (migoller) Updated packages and dependencies.
+* (MiGoller) Bug fix for issue #9: check Adapter with js-controller 3.0.x.
+* (MiGoller) Updated packages and dependencies.
 
 ### 0.2.4
-* (migoller) Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.
+* (MiGoller) Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.
 
 ### 0.2.3
-* (migoller) Added simple integrity checks for Life360 data.
+* (MiGoller) Added simple integrity checks for Life360 data.
 
 ### 0.2.2
-* (migoller) The adapter will remove stale datapoints.
+* (MiGoller) The adapter will remove stale datapoints.
 
 ### 0.2.1
-* (migoller) MyPlaces: Add additional places apart from the Life360 ones.
+* (MiGoller) MyPlaces: Add additional places apart from the Life360 ones.
 
 ### 0.1.1
-* (migoller) First alpha release
+* (MiGoller) First alpha release
 
 ### 0.0.1
-* (migoller) initial release
+* (MiGoller) initial release
 
 ## License
 MIT License

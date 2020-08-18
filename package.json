@@ -1,6 +1,6 @@
 {
   "name": "iobroker.life360",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "An ioBroker adapter for Life360.",
   "author": {
     "name": "migoller",
@@ -19,29 +19,29 @@
     "url": "https://github.com/MiGoller/ioBroker.life360"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.2.1",
+    "@iobroker/adapter-core": "^2.4.0",
     "bluebird": "^3.7.2",
-    "geolocation-utils": "^1.2.2",
+    "geolocation-utils": "^1.2.3",
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "@iobroker/testing": "^2.1.0",
-    "@types/chai": "^4.2.11",
-    "@types/chai-as-promised": "^7.1.2",
+    "@iobroker/testing": "^2.2.0",
+    "@types/chai": "^4.2.12",
+    "@types/chai-as-promised": "^7.1.3",
     "@types/gulp": "^4.0.6",
     "@types/mocha": "^7.0.2",
-    "@types/node": "^13.11.1",
+    "@types/node": "^13.13.15",
     "@types/proxyquire": "^1.3.28",
-    "@types/sinon": "^9.0.0",
+    "@types/sinon": "^9.0.4",
     "@types/sinon-chai": "^3.2.4",
     "axios": "^0.19.2",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "eslint": "^6.8.0",
     "gulp": "^4.0.2",
-    "mocha": "^7.1.1",
+    "mocha": "^7.2.0",
     "proxyquire": "^2.1.3",
-    "sinon": "^9.0.2",
+    "sinon": "^9.0.3",
     "sinon-chai": "^3.5.0"
   },
   "main": "main.js",

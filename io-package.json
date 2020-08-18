@@ -1,8 +1,32 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.6",
+        "version": "0.2.8",
         "news": {
+            "0.2.8": {
+                "en": "Upgraded several packages to wanted versions.",
+                "de": "Mehrere Pakete wurden auf die gewünschten Versionen aktualisiert.",
+                "ru": "Обновил несколько пакетов до желаемых версий.",
+                "pt": "Vários pacotes atualizados para as versões desejadas.",
+                "nl": "Meerdere pakketten geüpgraded naar gewenste versies.",
+                "fr": "Mise à niveau de plusieurs packages vers les versions souhaitées.",
+                "it": "Aggiornati diversi pacchetti alle versioni desiderate.",
+                "es": "Se actualizaron varios paquetes a las versiones deseadas.",
+                "pl": "Zaktualizowałem kilka pakietów do pożądanych wersji.",
+                "zh-cn": "将几个软件包升级到所需版本。"
+            },
+            "0.2.7": {
+                "en": "Upgraded lodash from 4.17.15 to 4.17.19",
+                "de": "Upgrade von lodash von 4.17.15 auf 4.17.19",
+                "ru": "Обновлен lodash с 4.17.15 до 4.17.19",
+                "pt": "Lodash atualizado de 4.17.15 para 4.17.19",
+                "nl": "Opgewaardeerde lodash van 4.17.15 naar 4.17.19",
+                "fr": "Lodash amélioré de 4.17.15 à 4.17.19",
+                "it": "Lodash aggiornato dal 4.17.15 al 4.17.19",
+                "es": "Lodash actualizado de 4.17.15 a 4.17.19",
+                "pl": "Ulepszono lodash z 4.17.15 do 4.17.19",
+                "zh-cn": "将lodash从4.17.15升级到4.17.19"
+            },
             "0.2.6": {
                 "en": "Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null",
                 "de": "Fehlerbehebung für Problem Nr. 12: Nicht erfasste Ausnahme: Die Eigenschaft 'timestamp' von null kann nicht gelesen werden",

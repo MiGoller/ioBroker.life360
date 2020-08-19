@@ -107,6 +107,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.9
+* (MiGoller) Removed node v8 from Travis config to fix build process.
+
 ### 0.2.8
 * (MiGoller) Upgraded several packages to wanted versions.
 

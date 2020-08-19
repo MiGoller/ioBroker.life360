@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.8",
+        "version": "0.2.9",
         "news": {
+            "0.2.9": {
+                "en": "Removed node v8 from Travis config to fix build process.",
+                "de": "Node v8 wurde aus der Travis-Konfiguration entfernt, um den Erstellungsprozess zu korrigieren.",
+                "ru": "Удален узел v8 из конфигурации Travis, чтобы исправить процесс сборки.",
+                "pt": "Removido o nó v8 da configuração do Travis para corrigir o processo de construção.",
+                "nl": "Node v8 verwijderd uit Travis-configuratie om het bouwproces te repareren.",
+                "fr": "Suppression du node v8 de la configuration de Travis pour corriger le processus de construction.",
+                "it": "Rimosso il node v8 dalla configurazione di Travis per correggere il processo di compilazione.",
+                "es": "Se eliminó el node v8 de la configuración de Travis para corregir el proceso de compilación.",
+                "pl": "Usunięto node v8 z konfiguracji Travisa, aby naprawić proces kompilacji.",
+                "zh-cn": "从Travis配置中删除了节点v8，以修复构建过程。"
+            },
             "0.2.8": {
                 "en": "Upgraded several packages to wanted versions.",
                 "de": "Mehrere Pakete wurden auf die gewünschten Versionen aktualisiert.",

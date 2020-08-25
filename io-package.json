@@ -1,8 +1,32 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.8",
+        "version": "0.2.10",
         "news": {
+            "0.2.10": {
+                "en": "Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8",
+                "de": "Behebung von Problem Nr. 18: Fehlertyp Fehler: Die Eigenschaft 'sourceId' von null kann seit der Aktualisierung auf 0.2.8 nicht gelesen werden",
+                "ru": "Исправление проблемы № 18: ошибка типа Ошибка: невозможно прочитать свойство sourceId, равное null, с момента обновления до 0.2.8",
+                "pt": "Correção para o problema nº 18: Erro TypeError: não é possível ler a propriedade 'sourceId' de nulo desde a atualização para 0.2.8",
+                "nl": "Oplossing voor probleem 18: fout TypeError: kan eigenschap 'sourceId' van null niet lezen sinds update naar 0.2.8",
+                "fr": "Correction du problème n ° 18: Erreur TypeError: Impossible de lire la propriété 'sourceId' de null depuis la mise à jour vers 0.2.8",
+                "it": "Correzione per il problema n. 18: Errore TypeError: Impossibile leggere la proprietà \"sourceId\" di null dall'aggiornamento a 0.2.8",
+                "es": "Solución para el problema n. ° 18: Error TypeError: no se puede leer la propiedad 'sourceId' de null desde la actualización a 0.2.8",
+                "pl": "Poprawka problemu nr 18: Błąd typu Błąd: Nie można odczytać właściwości „sourceId” o wartości null od czasu aktualizacji do wersji 0.2.8",
+                "zh-cn": "问题18的修复：错误类型错误：自更新至0.2.8后，无法读取null的属性'sourceId'"
+            },
+            "0.2.9": {
+                "en": "Removed node v8 from Travis config to fix build process.",
+                "de": "Node v8 wurde aus der Travis-Konfiguration entfernt, um den Erstellungsprozess zu korrigieren.",
+                "ru": "Удален узел v8 из конфигурации Travis, чтобы исправить процесс сборки.",
+                "pt": "Removido o nó v8 da configuração do Travis para corrigir o processo de construção.",
+                "nl": "Node v8 verwijderd uit Travis-configuratie om het bouwproces te repareren.",
+                "fr": "Suppression du node v8 de la configuration de Travis pour corriger le processus de construction.",
+                "it": "Rimosso il node v8 dalla configurazione di Travis per correggere il processo di compilazione.",
+                "es": "Se eliminó el node v8 de la configuración de Travis para corregir el proceso de compilación.",
+                "pl": "Usunięto node v8 z konfiguracji Travisa, aby naprawić proces kompilacji.",
+                "zh-cn": "从Travis配置中删除了节点v8，以修复构建过程。"
+            },
             "0.2.8": {
                 "en": "Upgraded several packages to wanted versions.",
                 "de": "Mehrere Pakete wurden auf die gewünschten Versionen aktualisiert.",

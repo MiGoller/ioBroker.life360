@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.10",
+        "version": "0.2.11",
         "news": {
+            "0.2.11": {
+                "en": "Added verbose logging on demand",
+                "de": "Ausführliche Protokollierung bei Bedarf hinzugefügt",
+                "ru": "Добавлен подробный журнал по запросу",
+                "pt": "Adicionado registro detalhado sob demanda",
+                "nl": "Uitgebreide logboekregistratie toegevoegd op aanvraag",
+                "fr": "Ajout de la journalisation détaillée à la demande",
+                "it": "Aggiunta la registrazione dettagliata su richiesta",
+                "es": "Se agregó un registro detallado a pedido",
+                "pl": "Dodano szczegółowe logowanie na żądanie",
+                "zh-cn": "按需添加了详细的日志记录"
+            },
             "0.2.10": {
                 "en": "Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8",
                 "de": "Behebung von Problem Nr. 18: Fehlertyp Fehler: Die Eigenschaft 'sourceId' von null kann seit der Aktualisierung auf 0.2.8 nicht gelesen werden",
@@ -213,7 +225,8 @@
         "location_object_type": "LatLng",
         "process_life360_circles": true,
         "process_life360_places": true,
-        "process_life360_people": true
+        "process_life360_people": true,
+        "debugging_verbose": false
     },
     "objects": [],
     "instanceObjects": [

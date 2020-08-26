@@ -107,6 +107,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.11
+* (MiGoller) Added verbose logging on demand
+
 ### 0.2.10
 * (MiGoller) Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8
 

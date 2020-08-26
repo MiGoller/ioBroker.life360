@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "Abilita la registrazione dettagliata",
     "LIFE360_COUNTRYCODE": "Codice paese Life360 per telefono cellulare:",
     "LIFE360_PASSWORD": "Password Life360:",
     "LIFE360_PHONE": "Numero di cellulare Life360:",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Places-Adattatore-esempio:",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "Nessuna",
     "SENDTO_PLACES_ADAPTER_REGEXP": "Schema di espressioni regolari per filtrare i dati inviati all'adattatore Places.",
+    "TAB_ADVANCED": "Avanzate",
     "TAB_GENERAL": "Life360",
     "TAB_INTEGRATION": "Integrazione",
     "TAB_MYPLACES": "I miei posti",

@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "Включить подробное ведение журнала",
     "LIFE360_COUNTRYCODE": "Код страны Life360 для мобильного телефона:",
     "LIFE360_PASSWORD": "Пароль Life360:",
     "LIFE360_PHONE": "Номер мобильного телефона Life360:",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Места-адаптер экземпляр:",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "Никто",
     "SENDTO_PLACES_ADAPTER_REGEXP": "Шаблон регулярного выражения для фильтрации данных, отправляемых на Places-адаптер.",
+    "TAB_ADVANCED": "Продвинутый",
     "TAB_GENERAL": "Life360",
     "TAB_INTEGRATION": "интеграция",
     "TAB_MYPLACES": "Мои места",

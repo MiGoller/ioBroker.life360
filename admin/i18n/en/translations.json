@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "Enable verbose logging",
     "LIFE360_COUNTRYCODE": "Life360 country code for mobile phone:",
     "LIFE360_PASSWORD": "Life360 password:",
     "LIFE360_PHONE": "Life360 mobile phone number:",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Places-adapter-instance to receive geo-positioning data:",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "None",
     "SENDTO_PLACES_ADAPTER_REGEXP": "Regular expression pattern to filter data send to the Places-adapter.",
+    "TAB_ADVANCED": "Advanced",
     "TAB_GENERAL": "Life360",
     "TAB_INTEGRATION": "Integration",
     "TAB_MYPLACES": "My places",

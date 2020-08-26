@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "Activer la journalisation détaillée",
     "LIFE360_COUNTRYCODE": "Code de pays Life360 pour téléphone portable:",
     "LIFE360_PASSWORD": "Mot de passe Life360:",
     "LIFE360_PHONE": "Numéro de téléphone mobile Life360:",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Places-adapter-instance:",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "Aucun",
     "SENDTO_PLACES_ADAPTER_REGEXP": "Modèle d'expression régulière permettant de filtrer les données envoyées à l'adaptateur Places.",
+    "TAB_ADVANCED": "Avancée",
     "TAB_GENERAL": "Life360",
     "TAB_INTEGRATION": "L'intégration",
     "TAB_MYPLACES": "Mes places",

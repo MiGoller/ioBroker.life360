@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "Włącz szczegółowe rejestrowanie",
     "LIFE360_COUNTRYCODE": "Kod kraju Life360 na telefon komórkowy:",
     "LIFE360_PASSWORD": "Hasło Life360:",
     "LIFE360_PHONE": "Numer telefonu komórkowego Life360:",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Miejsca-adaptera-instancji:",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "Żaden",
     "SENDTO_PLACES_ADAPTER_REGEXP": "Wzorzec wyrażeń regularnych do filtrowania danych wysyłanych do adaptera miejsc.",
+    "TAB_ADVANCED": "zaawansowane",
     "TAB_GENERAL": "Life360",
     "TAB_INTEGRATION": "Integracja",
     "TAB_MYPLACES": "Moje miejsca",

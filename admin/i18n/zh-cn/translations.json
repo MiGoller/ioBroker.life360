@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "启用详细日志记录",
     "LIFE360_COUNTRYCODE": "Life360手机国家区号：",
     "LIFE360_PASSWORD": "Life360密码：",
     "LIFE360_PHONE": "Life360手机号码：",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Places-adapter-instance：",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "没有",
     "SENDTO_PLACES_ADAPTER_REGEXP": "正则表达式模式，用于过滤发送到Places-adapter的数据。",
+    "TAB_ADVANCED": "高级",
     "TAB_GENERAL": "生活360",
     "TAB_INTEGRATION": "积分",
     "TAB_MYPLACES": "我的地方",

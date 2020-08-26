@@ -1,4 +1,5 @@
 {
+    "DEBUGGING_VERBOSE": "Schakel uitgebreide logboekregistratie in",
     "LIFE360_COUNTRYCODE": "Life360-landcode voor mobiele telefoon:",
     "LIFE360_PASSWORD": "Life360-wachtwoord:",
     "LIFE360_PHONE": "Life360 mobiel telefoonnummer:",
@@ -24,6 +25,7 @@
     "SENDTO_PLACES_ADAPTER_INSTANCE": "Places-adapter-instantie:",
     "SENDTO_PLACES_ADAPTER_INSTANCE_NONE": "Geen",
     "SENDTO_PLACES_ADAPTER_REGEXP": "Regelmatig expressiepatroon om gegevens te filteren die naar de Places-adapter worden verzonden.",
+    "TAB_ADVANCED": "Geavanceerd",
     "TAB_GENERAL": "Life360",
     "TAB_INTEGRATION": "integratie",
     "TAB_MYPLACES": "Mijn plaatsen",

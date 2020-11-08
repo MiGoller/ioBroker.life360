@@ -107,6 +107,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.12
+* (MiGoller) Bug fix for issue #22: MyPlaces feature does not show all members
+
 ### 0.2.11
 * (MiGoller) Added verbose logging on demand
 

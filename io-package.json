@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.11",
+        "version": "0.2.12",
         "news": {
+            "0.2.12": {
+                "en": "Fix for issue #22: MyPlaces feature does not show all members",
+                "de": "Fix für Problem Nr. 22: Die MyPlaces-Funktion zeigt nicht alle Mitglieder an",
+                "ru": "Исправление проблемы №22: функция MyPlaces не отображает всех участников",
+                "pt": "Correção para o problema nº 22: o recurso MyPlaces não mostra todos os membros",
+                "nl": "Oplossing voor probleem 22: de functie MyPlaces toont niet alle leden",
+                "fr": "Correction du problème n ° 22: la fonctionnalité MyPlaces n'affiche pas tous les membres",
+                "it": "Risolto il problema # 22: la funzione MyPlaces non mostra tutti i membri",
+                "es": "Solución para el problema n. ° 22: la función MyPlaces no muestra a todos los miembros",
+                "pl": "Poprawka dla problemu nr 22: funkcja MyPlaces nie wyświetla wszystkich członków",
+                "zh-cn": "解决问题＃22：MyPlaces功能未显示所有成员"
+            },
             "0.2.11": {
                 "en": "Added verbose logging on demand",
                 "de": "Ausführliche Protokollierung bei Bedarf hinzugefügt",

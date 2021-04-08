@@ -3,6 +3,9 @@
         "name": "life360",
         "version": "0.2.12",
         "news": {
+            "0.2.13": {
+                "en": "PeterVoronov's pull request #24: Allow to create states with \"write\": false, to make value.gps.* compatible with ioBroker.type-detector."
+            },
             "0.2.12": {
                 "en": "Fix for issue #22: MyPlaces feature does not show all members",
                 "de": "Fix für Problem Nr. 22: Die MyPlaces-Funktion zeigt nicht alle Mitglieder an",

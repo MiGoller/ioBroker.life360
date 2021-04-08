@@ -107,6 +107,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.13
+* (PeterVoronov) Pull request #24: Allow to create states with "write": false, to make value.gps.* compatible with ioBroker.type-detector.
+
 ### 0.2.12
 * (MiGoller) Bug fix for issue #22: MyPlaces feature does not show all members
 

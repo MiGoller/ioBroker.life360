@@ -27,3 +27,6 @@ admin/i18n
 
 # maintenance scripts
 maintenance/**
+
+# GitHub
+.github

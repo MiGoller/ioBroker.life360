@@ -1,8 +1,32 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.12",
+        "version": "0.2.14",
         "news": {
+            "0.2.14": {
+                "en": "Fix for issue #27: Adapter looses places (connection)",
+                "de": "Fix für Problem Nr. 27: Adapter verliert Plätze (Verbindung)",
+                "ru": "Исправление проблемы №27: адаптер теряет места (соединение)",
+                "pt": "Correção para o problema nº 27: o adaptador perde lugares (conexão)",
+                "nl": "Oplossing voor probleem # 27: adapter verliest plaatsen (verbinding)",
+                "fr": "Correction du problème n ° 27: l'adaptateur perd des places (connexion)",
+                "it": "Risolto il problema n. 27: l'adattatore perde posti (connessione)",
+                "es": "Solución para el problema n. ° 27: el adaptador pierde lugares (conexión)",
+                "pl": "Poprawka dla problemu nr 27: Adapter traci miejsca (połączenie)",
+                "zh-cn": "解决问题27的方法：适配器失去空间（连接）"
+            },
+            "0.2.13": {
+                "en": "PeterVoronov's pull request #24: Allow to create states with \"write\": false, to make value.gps.* compatible with ioBroker.type-detector.",
+                "de": "PeterVoronovs Pull-Anfrage Nr. 24: Erlaube das Erstellen von Zuständen mit \"write\": false, um value.gps. * Kompatibel mit ioBroker.type-detector zu machen.",
+                "ru": "Пул-реквест Петра Воронова №24: Разрешить создавать состояния с \"write\": false, чтобы сделать value.gps. * Совместимым с ioBroker.type-Detector.",
+                "pt": "Solicitação de pull de PeterVoronov # 24: Permite criar estados com \"write\": false, para tornar value.gps. * Compatível com ioBroker.type-detector.",
+                "nl": "PeterVoronov's pull request # 24: Sta toe om toestanden te creëren met \"write\": false, om value.gps. * Compatibel te maken met ioBroker.type-detector.",
+                "fr": "Pull request # 24 de PeterVoronov: Permet de créer des états avec \"write\": false, pour rendre value.gps. * Compatible avec ioBroker.type-detector.",
+                "it": "La richiesta pull di PeterVoronov # 24: consente di creare stati con \"write\": false, per rendere value.gps. * Compatibile con ioBroker.type-detector.",
+                "es": "Pull request # 24 de PeterVoronov: Permitir crear estados con \"write\": false, para hacer que value.gps. * Sea compatible con ioBroker.type-detector.",
+                "pl": "Żądanie ściągnięcia Petera Voronova nr 24: Zezwól na tworzenie stanów z \"write\": false, aby wartość value.gps. * Była kompatybilna z detektorem ioBroker.type.",
+                "zh-cn": "PeterVoronov的拉取请求＃24：允许使用“ write”：false创建状态，以使value.gps。*与ioBroker.type-detector兼容。"
+            },
             "0.2.12": {
                 "en": "Fix for issue #22: MyPlaces feature does not show all members",
                 "de": "Fix für Problem Nr. 22: Die MyPlaces-Funktion zeigt nicht alle Mitglieder an",

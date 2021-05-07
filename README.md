@@ -4,11 +4,14 @@
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
+![Number of Installations (latest)](https://iobroker.live/badges/life360-installed.svg)
+![Number of Installations (stable)](https://iobroker.live/badges/life360-stable.svg)
 [![Dependency Status](https://img.shields.io/david/MiGoller/iobroker.life360.svg)](https://david-dm.org/MiGoller/iobroker.life360)
 [![Known Vulnerabilities](https://snyk.io/test/github/MiGoller/ioBroker.life360/badge.svg)](https://snyk.io/test/github/MiGoller/ioBroker.life360)
-[![Travis-CI](https://img.shields.io/travis/MiGoller/ioBroker.life360/master.svg)](https://travis-ci.org/MiGoller/ioBroker.life360)
 
 [![NPM](https://nodei.co/npm/iobroker.life360.png?downloads=true)](https://nodei.co/npm/iobroker.life360/)
+
+**Tests:** ![Test and Release](https://github.com/MiGoller/ioBroker.life360/workflows/Test%20and%20Release/badge.svg)
 
 ## Life360 adapter for ioBroker
 
@@ -30,16 +33,16 @@ If you don't want to install the adapter using the web UI or if you want to inst
 2. Switch to ioBroker's installation directory (defaults to `/opt/iobroker`)
 3. Run the following commands
 
-    ```
-    	iobroker npm install migoller/iobroker.life360 --loglevel error --prefix "/opt/iobroker"
+    ``` bash
+    iobroker npm install migoller/iobroker.life360 --loglevel error --prefix "/opt/iobroker"
     ```
 
 4. Add an instance using the web UI
 
 If you want to install the development version just type ...
 
-```
-	iobroker npm install migoller/iobroker.life360#develop --loglevel error --prefix "/opt/iobroker"
+``` bash
+iobroker npm install migoller/iobroker.life360#develop --loglevel error --prefix "/opt/iobroker"
 ```
 
 ## Configuration
@@ -56,7 +59,7 @@ You'll have to setup the adapter with your personal [Life360](https://www.life36
 
 ### My Places
 
-You can add your own places apart from the Life360 places to your adapter instance. "My Places" let you define private places that are not public to the Life360 cloud services. The adapter checks which persons are present at your private places on every Life360 data poll. 
+You can add your own places apart from the Life360 places to your adapter instance. "My Places" let you define private places that are not public to the Life360 cloud services. The adapter checks which persons are present at your private places on every Life360 data poll.
 
 ![Logo](admin/ioBroker.life360.settings.myplaces.png)
 
@@ -126,11 +129,13 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 - (MiGoller) Enhancement issue #29: Think about to fix the issues found by adapter checker
 
 ### 0.2.14
-* (MiGoller) Fix for issue #27: Adapter looses places (connection)
-* (MiGoller) Enhanced code to prevent warnings on setting state value for new objects / datapoints.
+
+- (MiGoller) Fix for issue #27: Adapter looses places (connection)
+- (MiGoller) Enhanced code to prevent warnings on setting state value for new objects / datapoints.
 
 ### 0.2.13
-* (PeterVoronov) Pull request #24: Allow to create states with "write": false, to make value.gps.* compatible with ioBroker.type-detector.
+
+- (PeterVoronov) Pull request #24: Allow to create states with "write": false, to make value.gps.* compatible with ioBroker.type-detector.
 
 ### 0.2.12
 

@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.14",
+        "version": "0.2.15",
         "news": {
+            "0.2.15": {
+                "en": "Minor enhancements and bugfixes.",
+                "de": "Kleinere Verbesserungen und Bugfixes.",
+                "ru": "Незначительные улучшения и исправления.",
+                "pt": "Pequenos aprimoramentos e correções de bugs.",
+                "nl": "Kleine verbeteringen en bugfixes.",
+                "fr": "Améliorations mineures et corrections de bogues.",
+                "it": "Miglioramenti minori e correzioni di bug.",
+                "es": "Pequeñas mejoras y correcciones de errores.",
+                "pl": "Drobne ulepszenia i poprawki błędów.",
+                "zh-cn": "次要增强功能和错误修正。"
+            },
             "0.2.14": {
                 "en": "Fix for issue #27: Adapter looses places (connection)",
                 "de": "Fix für Problem Nr. 27: Adapter verliert Plätze (Verbindung)",

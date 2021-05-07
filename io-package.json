@@ -247,7 +247,9 @@
             {
                 "js-controller": ">=1.4.2"
             }
-        ]
+        ],
+        "connectionType": "cloud",
+        "dataSource": "poll"
     },
     "native": {
         "life360_username": "me@me.local",

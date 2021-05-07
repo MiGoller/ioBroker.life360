@@ -6,7 +6,6 @@ nbproject
 
 # npm package files
 iobroker.*.tgz
-package-lock.json
 
 Thumbs.db
 

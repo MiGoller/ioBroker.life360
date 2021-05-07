@@ -1,5 +1,6 @@
-![Logo](admin/life360.png)
 # ioBroker.life360
+
+![Logo](admin/life360.png)
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.life360.svg)](https://www.npmjs.com/package/iobroker.life360)
@@ -28,12 +29,15 @@ If you don't want to install the adapter using the web UI or if you want to inst
 1. Login to your ioBroker host
 2. Switch to ioBroker's installation directory (defaults to `/opt/iobroker`)
 3. Run the following commands
+
     ```
     	iobroker npm install migoller/iobroker.life360 --loglevel error --prefix "/opt/iobroker"
     ```
+
 4. Add an instance using the web UI
 
 If you want to install the development version just type ...
+
 ```
 	iobroker npm install migoller/iobroker.life360#develop --loglevel error --prefix "/opt/iobroker"
 ```
@@ -57,6 +61,7 @@ You can add your own places apart from the Life360 places to your adapter instan
 ![Logo](admin/ioBroker.life360.settings.myplaces.png)
 
 The places' setup happens the same way as with the Places-adapter:
+
 - Define a ```Name``` for the place.
 
 - Set the geo-position data for the place (latitude and longitude).
@@ -64,6 +69,7 @@ The places' setup happens the same way as with the Places-adapter:
 - Set the place's radius in meters.
 
 #### Why should I use My Places apart from Life360 places?
+
 - My Places are private! Life360 will not know about them.
 
 - People can be present at more than one place at the same point of time. For example you can be present at your "home" place and your "neighborhood" place at the same time.
@@ -79,6 +85,7 @@ The Life360 cloud services provide a lot of information about the circles, place
 #### Life360 data
 
 Select the Life360 data you want the adapter to push to ioBroker data points.
+
 - Enable processing of ```Life360 circles``` for information regarding the circles, the circles' places and the circles' members. You will get a lot of information regarding the circles, but only essential information about places and people.
 
 - Enable processing of ```Life360 places``` for detailed information regarding any Life360 circle, you are a member of.
@@ -88,17 +95,21 @@ Select the Life360 data you want the adapter to push to ioBroker data points.
 #### Send location data to Places-adapter
 
 The ioBroker.life360 adapter let you send location data for known Life360 people to an instance of the Places-adapter.
+
 - Select an instance of the Places-adapter as a receiver for the location data. Select ```None``` to disable sending of location data.
+
 - You can include or exclude people using regular expression patterns. The adapter will check if the string ```[Firstname] [Lastname]``` matches your pattern. Set pattern to empty string to disable regex filtering.
 
 #### Location-Tracking
 
 You can activate location-tracking for all people. Location-tracking will add geo-positioning details to the people information.
+
 - Check to activate location-tracking.
 
 - Set the geo-location object-type to push combined latitude and longitude values.
 
 ## Disclaimer
+
 I did not find any official documentation for the [Life360](https://www.life360.com) REST APIs. Apparently [Life360](https://www.life360.com) does not support the use of the REST API for other applications than its own ones.
 
 My REST API integration is based on reverse engineering done by the open source community and an API token discovered on [Life360](https://www.life360.com) code which is public available. [Life360](https://www.life360.com) could disable or modify this API token or change its REST API in a way that this adapter will not work as expected anymore.
@@ -106,6 +117,13 @@ My REST API integration is based on reverse engineering done by the open source 
 Feel free to modify the default timespan of 60 seconds for the polling interval. The adapter does not allow modifying the interval to less than 15 seconds to prevent gaining any rate limits and to prevent ioBroker Admin getting slower and slower.
 
 ## Changelog
+
+### 0.2.15 (2021-05-07)
+
+- (MiGoller) Fix for issue #25: Sanitize strings for ioBroker object IDs
+- (MiGoller) Fix for issue #21: Adjust object type for gps-coordinates
+- (MiGoller) Enhancement issue #32: Add a new format for gps-coordinates for easier integration in Jarvis
+- (MiGoller) Enhancement issue #29: Think about to fix the issues found by adapter checker
 
 ### 0.2.14
 * (MiGoller) Fix for issue #27: Adapter looses places (connection)
@@ -115,52 +133,67 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 * (PeterVoronov) Pull request #24: Allow to create states with "write": false, to make value.gps.* compatible with ioBroker.type-detector.
 
 ### 0.2.12
-* (MiGoller) Bug fix for issue #22: MyPlaces feature does not show all members
+
+- (MiGoller) Bug fix for issue #22: MyPlaces feature does not show all members
 
 ### 0.2.11
-* (MiGoller) Added verbose logging on demand
+
+- (MiGoller) Added verbose logging on demand
 
 ### 0.2.10
-* (MiGoller) Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8
+
+- (MiGoller) Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8
 
 ### 0.2.9
-* (MiGoller) Removed node v8 from Travis config to fix build process.
+
+- (MiGoller) Removed node v8 from Travis config to fix build process.
 
 ### 0.2.8
-* (MiGoller) Upgraded several packages to wanted versions.
+
+- (MiGoller) Upgraded several packages to wanted versions.
 
 ### 0.2.7
-* (MiGoller) Upgraded lodash from 4.17.15 to 4.17.19
+
+- (MiGoller) Upgraded lodash from 4.17.15 to 4.17.19
 
 ### 0.2.6
-* (MiGoller) Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null
+
+- (MiGoller) Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null
 
 ### 0.2.5
-* (MiGoller) Bug fix for issue #9: check Adapter with js-controller 3.0.x.
-* (MiGoller) Updated packages and dependencies.
+
+- (MiGoller) Bug fix for issue #9: check Adapter with js-controller 3.0.x.
+- (MiGoller) Updated packages and dependencies.
 
 ### 0.2.4
-* (MiGoller) Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.
+
+- (MiGoller) Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.
 
 ### 0.2.3
-* (MiGoller) Added simple integrity checks for Life360 data.
+
+- (MiGoller) Added simple integrity checks for Life360 data.
 
 ### 0.2.2
-* (MiGoller) The adapter will remove stale datapoints.
+
+- (MiGoller) The adapter will remove stale datapoints.
 
 ### 0.2.1
-* (MiGoller) MyPlaces: Add additional places apart from the Life360 ones.
+
+- (MiGoller) MyPlaces: Add additional places apart from the Life360 ones.
 
 ### 0.1.1
-* (MiGoller) First alpha release
+
+- (MiGoller) First alpha release
 
 ### 0.0.1
-* (MiGoller) initial release
+
+- (MiGoller) initial release
 
 ## License
+
 MIT License
 
-Copyright (c) 2019-2020 Michael Goller <goller.michael@gmail.com>
+Copyright (c) 2019-2021 Michael Goller <goller.michael@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

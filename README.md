@@ -126,13 +126,11 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 - (MiGoller) Enhancement issue #29: Think about to fix the issues found by adapter checker
 
 ### 0.2.14
-
-- (MiGoller) Fix for issue #27: Adapter looses places (connection)
-- (MiGoller) Enhanced code to prevent warnings on setting state value for new objects / datapoints.
+* (MiGoller) Fix for issue #27: Adapter looses places (connection)
+* (MiGoller) Enhanced code to prevent warnings on setting state value for new objects / datapoints.
 
 ### 0.2.13
-
-- (PeterVoronov) Pull request #24: Allow to create states with "write": false, to make value.gps.* compatible with ioBroker.type-detector.
+* (PeterVoronov) Pull request #24: Allow to create states with "write": false, to make value.gps.* compatible with ioBroker.type-detector.
 
 ### 0.2.12
 

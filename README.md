@@ -121,6 +121,10 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.16 (2021-07-12)
+
+- (MiGoller) Fix for issue #39: Don't let the adapter crash if the Life360 API returns a server error.
+
 ### 0.2.15 (2021-05-07)
 
 - (MiGoller) Fix for issue #25: Sanitize strings for ioBroker object IDs

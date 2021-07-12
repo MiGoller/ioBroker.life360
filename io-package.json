@@ -1,8 +1,11 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.15",
+        "version": "0.2.16",
         "news": {
+            "0.2.16": {
+                "en": "Fix for issue #39: Don't let the adapter crash if the Life360 API returns a server error."
+            },
             "0.2.15": {
                 "en": "Minor enhancements and bugfixes.",
                 "de": "Kleinere Verbesserungen und Bugfixes.",

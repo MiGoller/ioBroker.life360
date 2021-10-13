@@ -120,6 +120,9 @@ My REST API integration is based on reverse engineering done by the open source 
 Feel free to modify the default timespan of 60 seconds for the polling interval. The adapter does not allow modifying the interval to less than 15 seconds to prevent gaining any rate limits and to prevent ioBroker Admin getting slower and slower.
 
 ## Changelog
+### 0.2.17 (2021-10-13)
+* news
+
 
 ### 0.2.16 (2021-07-12)
 

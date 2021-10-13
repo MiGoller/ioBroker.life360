@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.15",
+        "version": "0.2.16",
         "news": {
+            "0.2.16": {
+                "en": "Fix for issue #39: Don't let the adapter crash if the Life360 API returns a server error. \nFix for issue #35: ioBroker complains about writing to a read-only state on adapter startup.",
+                "de": "Behebung von Problem Nr. 39: Lassen Sie den Adapter nicht abstürzen, wenn die Life360-API einen Serverfehler zurückgibt. \nBehebung von Problem Nr. 35: ioBroker complains about writing to a read-only state on adapter startup.",
+                "ru": "Исправление проблемы №39: не допускайте сбоя адаптера, если Life360 API возвращает ошибку сервера. ",
+                "pt": "Correção para o problema nº 39: não deixe o adaptador travar se a API Life360 retornar um erro de servidor. ",
+                "nl": "Oplossing voor probleem #39: laat de adapter niet crashen als de Life360 API een serverfout retourneert. ",
+                "fr": "Correction du problème n° 39 : ne laissez pas l'adaptateur planter si l'API Life360 renvoie une erreur de serveur. ",
+                "it": "Correzione per il problema n. 39: non consentire l'arresto anomalo dell'adattatore se l'API Life360 restituisce un errore del server. ",
+                "es": "Solución para el problema n. ° 39: no permita que el adaptador se bloquee si la API Life360 devuelve un error del servidor. ",
+                "pl": "Poprawka dotycząca problemu nr 39: Nie pozwól, aby adapter uległ awarii, jeśli interfejs API Life360 zwróci błąd serwera. ",
+                "zh-cn": "修复问题 #39：如果 Life360 API 返回服务器错误，不要让适配器崩溃。"
+            },
             "0.2.15": {
                 "en": "Minor enhancements and bugfixes.",
                 "de": "Kleinere Verbesserungen und Bugfixes.",

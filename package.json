@@ -1,6 +1,6 @@
 {
   "name": "iobroker.life360",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "description": "An ioBroker adapter for Life360.",
   "author": {
     "name": "migoller",
@@ -22,7 +22,8 @@
     "@iobroker/adapter-core": "^2.4.0",
     "bluebird": "^3.7.2",
     "geolocation-utils": "^1.2.3",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "retry-request": "^4.2.2"
   },
   "devDependencies": {
     "@iobroker/testing": "^2.3.0",
@@ -49,7 +50,6 @@
   "scripts": {
     "test:js": "mocha --opts test/mocha.custom.opts",
     "test:package": "mocha test/package --exit",
-    "test:unit": "mocha test/unit --exit",
     "test:integration": "mocha test/integration --exit",
     "test": "npm run test:js && npm run test:package",
     "lint": "eslint",

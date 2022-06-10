@@ -121,6 +121,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.18 (2022-06-10)
+* (MiGoller) Fix for issue #59: Adapter fails to authenticate after Life360 API changed.
+
 ### 0.2.17 (2021-11-21)
 
 * (PeterVoronov) Fix for issue [#41: Fix for error in publishCirclePlaces "Cannot read property 'val' of null](https://github.com/MiGoller/ioBroker.life360/pull/41)

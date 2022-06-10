@@ -1,6 +1,6 @@
 {
   "name": "iobroker.life360",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "description": "An ioBroker adapter for Life360.",
   "author": {
     "name": "migoller",

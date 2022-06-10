@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.17",
+        "version": "0.2.18",
         "news": {
+            "0.2.18": {
+                "en": "Fix for issue #59: Adapter fails to authenticate after Life360 API changed.",
+                "de": "Behebung von Problem Nr. 59: Adapter kann sich nicht authentifizieren, nachdem die Life360-API geändert wurde.",
+                "ru": "Исправление ошибки № 59: адаптер не проходит аутентификацию после изменения API Life360.",
+                "pt": "Correção para o problema nº 59: o adaptador falha ao autenticar após a alteração da API Life360.",
+                "nl": "Oplossing voor probleem #59: de adapter kan niet worden geverifieerd nadat de Life360 API is gewijzigd.",
+                "fr": "Correction du problème n° 59 : l'adaptateur ne parvient pas à s'authentifier après la modification de l'API Life360.",
+                "it": "Risolto il problema n. 59: l'adattatore non riesce ad autenticarsi dopo la modifica dell'API Life360.",
+                "es": "Solución para el problema n.° 59: el adaptador no se autentica después de que se cambió la API de Life360.",
+                "pl": "Naprawiono błąd nr 59: uwierzytelnianie adaptera nie powiodło się po zmianie interfejsu Life360 API.",
+                "zh-cn": "修复问题 #59：Life360 API 更改后适配器无法进行身份验证。"
+            },
             "0.2.17": {
                 "en": "Multiple bugfixes.",
                 "de": "Mehrere Bugfixes.",

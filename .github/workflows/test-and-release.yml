@@ -50,8 +50,8 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                node-version: [12.x, 14.x]
-                os: [ubuntu-latest, windows-latest, macos-latest]
+                node-version: [12.x, 14.x, 16.x]
+                os: [ubuntu-latest]
 
         steps:
             - name: Checkout code

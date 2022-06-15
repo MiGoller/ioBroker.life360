@@ -1,5 +1,13 @@
 {
 	"eslint.enable": true,
+	"json.schemas": [
+        {
+            "fileMatch": [
+                "io-package.json"
+            ],
+            "url": "https://json.schemastore.org/io-package"
+        }
+    ],
 	"spellright.language": [
 		"en"
 	],

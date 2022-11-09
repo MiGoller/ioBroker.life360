@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.18",
+        "version": "0.2.19",
         "news": {
+            "0.2.19": {
+                "en": "Fix for issue #64: Adapter v.0.2.18 fails to login",
+                "de": "Behebung von Problem Nr. 64: Adapter v.0.2.18 kann sich nicht anmelden",
+                "ru": "Исправление ошибки № 64: адаптер версии 0.2.18 не может войти в систему.",
+                "pt": "Correção para o problema nº 64: o adaptador v.0.2.18 falha ao fazer login",
+                "nl": "Oplossing voor probleem #64: Adapter v.0.2.18 kan niet inloggen",
+                "fr": "Correction du problème n° 64 : l'adaptateur v.0.2.18 ne parvient pas à se connecter",
+                "it": "Risolto il problema n. 64: l'adattatore v.0.2.18 non riesce ad accedere",
+                "es": "Solución para el problema n.º 64: el adaptador v.0.2.18 no puede iniciar sesión",
+                "pl": "Poprawka dla problemu #64: Adapter v.0.2.18 nie loguje się",
+                "zh-cn": "修复问题 #64：适配器 v.0.2.18 无法登录"
+            },
             "0.2.18": {
                 "en": "Fix for issue #59: Adapter fails to authenticate after Life360 API changed.",
                 "de": "Behebung von Problem Nr. 59: Adapter kann sich nicht authentifizieren, nachdem die Life360-API geändert wurde.",

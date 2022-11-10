@@ -121,6 +121,9 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+### 0.2.19 (2022-11-09)
+* (MiGoller) Fix for issue #64: Adapter v.0.2.18 fails to login
+
 ### 0.2.18 (2022-06-10)
 * (MiGoller) Fix for issue #59: Adapter fails to authenticate after Life360 API changed.
 

@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.18",
+        "version": "0.2.19",
         "news": {
+            "0.2.19": {
+                "en": "Fix for issue #64: Adapter v.0.2.18 fails to login",
+                "de": "Behebung von Problem Nr. 64: Adapter v.0.2.18 kann sich nicht anmelden",
+                "ru": "Исправление ошибки № 64: адаптер версии 0.2.18 не может войти в систему.",
+                "pt": "Correção para o problema nº 64: o adaptador v.0.2.18 falha ao fazer login",
+                "nl": "Oplossing voor probleem #64: Adapter v.0.2.18 kan niet inloggen",
+                "fr": "Correction du problème n° 64 : l'adaptateur v.0.2.18 ne parvient pas à se connecter",
+                "it": "Risolto il problema n. 64: l'adattatore v.0.2.18 non riesce ad accedere",
+                "es": "Solución para el problema n.º 64: el adaptador v.0.2.18 no puede iniciar sesión",
+                "pl": "Poprawka dla problemu #64: Adapter v.0.2.18 nie loguje się",
+                "zh-cn": "修复问题 #64：适配器 v.0.2.18 无法登录"
+            },
             "0.2.18": {
                 "en": "Fix for issue #59: Adapter fails to authenticate after Life360 API changed.",
                 "de": "Behebung von Problem Nr. 59: Adapter kann sich nicht authentifizieren, nachdem die Life360-API geändert wurde.",
@@ -98,150 +110,6 @@
                 "es": "Se agregó un registro detallado a pedido",
                 "pl": "Dodano szczegółowe logowanie na żądanie",
                 "zh-cn": "按需添加了详细的日志记录"
-            },
-            "0.2.10": {
-                "en": "Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8",
-                "de": "Behebung von Problem Nr. 18: Fehlertyp Fehler: Die Eigenschaft 'sourceId' von null kann seit der Aktualisierung auf 0.2.8 nicht gelesen werden",
-                "ru": "Исправление проблемы № 18: ошибка типа Ошибка: невозможно прочитать свойство sourceId, равное null, с момента обновления до 0.2.8",
-                "pt": "Correção para o problema nº 18: Erro TypeError: não é possível ler a propriedade 'sourceId' de nulo desde a atualização para 0.2.8",
-                "nl": "Oplossing voor probleem 18: fout TypeError: kan eigenschap 'sourceId' van null niet lezen sinds update naar 0.2.8",
-                "fr": "Correction du problème n ° 18: Erreur TypeError: Impossible de lire la propriété 'sourceId' de null depuis la mise à jour vers 0.2.8",
-                "it": "Correzione per il problema n. 18: Errore TypeError: Impossibile leggere la proprietà \"sourceId\" di null dall'aggiornamento a 0.2.8",
-                "es": "Solución para el problema n. ° 18: Error TypeError: no se puede leer la propiedad 'sourceId' de null desde la actualización a 0.2.8",
-                "pl": "Poprawka problemu nr 18: Błąd typu Błąd: Nie można odczytać właściwości „sourceId” o wartości null od czasu aktualizacji do wersji 0.2.8",
-                "zh-cn": "问题18的修复：错误类型错误：自更新至0.2.8后，无法读取null的属性'sourceId'"
-            },
-            "0.2.9": {
-                "en": "Removed node v8 from Travis config to fix build process.",
-                "de": "Node v8 wurde aus der Travis-Konfiguration entfernt, um den Erstellungsprozess zu korrigieren.",
-                "ru": "Удален узел v8 из конфигурации Travis, чтобы исправить процесс сборки.",
-                "pt": "Removido o nó v8 da configuração do Travis para corrigir o processo de construção.",
-                "nl": "Node v8 verwijderd uit Travis-configuratie om het bouwproces te repareren.",
-                "fr": "Suppression du node v8 de la configuration de Travis pour corriger le processus de construction.",
-                "it": "Rimosso il node v8 dalla configurazione di Travis per correggere il processo di compilazione.",
-                "es": "Se eliminó el node v8 de la configuración de Travis para corregir el proceso de compilación.",
-                "pl": "Usunięto node v8 z konfiguracji Travisa, aby naprawić proces kompilacji.",
-                "zh-cn": "从Travis配置中删除了节点v8，以修复构建过程。"
-            },
-            "0.2.8": {
-                "en": "Upgraded several packages to wanted versions.",
-                "de": "Mehrere Pakete wurden auf die gewünschten Versionen aktualisiert.",
-                "ru": "Обновил несколько пакетов до желаемых версий.",
-                "pt": "Vários pacotes atualizados para as versões desejadas.",
-                "nl": "Meerdere pakketten geüpgraded naar gewenste versies.",
-                "fr": "Mise à niveau de plusieurs packages vers les versions souhaitées.",
-                "it": "Aggiornati diversi pacchetti alle versioni desiderate.",
-                "es": "Se actualizaron varios paquetes a las versiones deseadas.",
-                "pl": "Zaktualizowałem kilka pakietów do pożądanych wersji.",
-                "zh-cn": "将几个软件包升级到所需版本。"
-            },
-            "0.2.7": {
-                "en": "Upgraded lodash from 4.17.15 to 4.17.19",
-                "de": "Upgrade von lodash von 4.17.15 auf 4.17.19",
-                "ru": "Обновлен lodash с 4.17.15 до 4.17.19",
-                "pt": "Lodash atualizado de 4.17.15 para 4.17.19",
-                "nl": "Opgewaardeerde lodash van 4.17.15 naar 4.17.19",
-                "fr": "Lodash amélioré de 4.17.15 à 4.17.19",
-                "it": "Lodash aggiornato dal 4.17.15 al 4.17.19",
-                "es": "Lodash actualizado de 4.17.15 a 4.17.19",
-                "pl": "Ulepszono lodash z 4.17.15 do 4.17.19",
-                "zh-cn": "将lodash从4.17.15升级到4.17.19"
-            },
-            "0.2.6": {
-                "en": "Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null",
-                "de": "Fehlerbehebung für Problem Nr. 12: Nicht erfasste Ausnahme: Die Eigenschaft 'timestamp' von null kann nicht gelesen werden",
-                "ru": "Исправление ошибки для проблемы № 12: необработанное исключение: невозможно прочитать свойство 'timestamp' из null",
-                "pt": "Correção de bug para o problema 12: Exceção não capturada: Não é possível ler a propriedade 'timestamp' de null",
-                "nl": "Bugfix voor probleem # 12: niet-afgevangen uitzondering: kan eigenschap 'tijdstempel' van null niet lezen",
-                "fr": "Correction d'un bug pour le problème # 12: exception non interceptée: impossible de lire la propriété «horodatage» de null",
-                "it": "Correzione di bug per il problema n. 12: eccezione non rilevata: impossibile leggere la proprietà 'timestamp' di null",
-                "es": "Corrección de errores para el problema # 12: excepción no detectada: no se puede leer la propiedad 'marca de tiempo' de nulo",
-                "pl": "Poprawka błędu dla problemu nr 12: Nieprzechwycony wyjątek: Nie można odczytać właściwości „znacznik czasu” wartości null",
-                "zh-cn": "问题12的错误修复：未捕获的异常：无法读取null的属性“时间戳”"
-            },
-            "0.2.5": {
-                "en": "Bug fix for issue #9: check Adapter with js-controller 3.0.x.",
-                "de": "Fehlerbehebung für Problem Nr. 9: Überprüfen Sie den Adapter mit js-controller 3.0.x.",
-                "ru": "Исправление ошибки для проблемы № 9: проверьте адаптер с помощью js-controller 3.0.x.",
-                "pt": "Correção de bug para o problema # 9: verifique o Adaptador com o js-controller 3.0.x.",
-                "nl": "Bugfix voor probleem # 9: controleer Adapter met js-controller 3.0.x.",
-                "fr": "Correction d'un bug pour le problème # 9: vérifiez l'adaptateur avec js-controller 3.0.x.",
-                "it": "Correzione di bug per il problema n. 9: controllare l'adattatore con js-controller 3.0.x.",
-                "es": "Corrección de errores para el problema # 9: verifique el Adaptador con js-controller 3.0.x.",
-                "pl": "Poprawka błędu dla problemu nr 9: sprawdź Adapter z kontrolerem js 3.0.x.",
-                "zh-cn": "问题9的错误修复：使用js-controller 3.0.x检查适配器。"
-            },
-            "0.2.4": {
-                "en": "Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.",
-                "de": "Bereinigen Sie veraltete Datenpunkte nach 30 Tagen, um zu verhindern, dass Datenpunkte entfernt werden, wenn Life360 nicht verfügbar ist.",
-                "ru": "Очистите устаревшие точки данных через 30 дней, чтобы предотвратить удаление точек данных, когда Life360 недоступен.",
-                "pt": "Limpe os pontos de dados antigos após 30 dias para evitar a remoção de pontos de dados quando o Life360 não estiver disponível.",
-                "nl": "Ruim oude datapunten op na 30 dagen om te voorkomen dat datapunten worden verwijderd wanneer Life360 niet beschikbaar is.",
-                "fr": "Nettoyez les points de données périmés après 30 jours pour éviter de les supprimer lorsque Life360 n’est pas disponible.",
-                "it": "Elimina i punti dati non aggiornati dopo 30 giorni per impedire la rimozione dei punti dati quando Life360 non è disponibile.",
-                "es": "Limpie los puntos de datos obsoletos después de 30 días para evitar la eliminación de puntos de datos cuando Life360 no esté disponible.",
-                "pl": "Wyczyść nieaktualne punkty danych po 30 dniach, aby zapobiec ich usuwaniu, gdy Life360 nie jest dostępny.",
-                "zh-cn": "30天后清理陈旧的数据点，以防止在Life360不可用时删除数据点。"
-            },
-            "0.2.3": {
-                "en": "Added simple integrity checks for Life360 data.",
-                "de": "Einfache Integritätsprüfungen für Life360-Daten hinzugefügt.",
-                "ru": "Добавлены простые проверки целостности данных Life360.",
-                "pt": "Adicionadas verificações simples de integridade dos dados Life360.",
-                "nl": "Eenvoudige integriteitscontroles voor Life360-gegevens toegevoegd.",
-                "fr": "Ajout de simples contrôles d'intégrité pour les données Life360.",
-                "it": "Aggiunti semplici controlli di integrità per i dati Life360.",
-                "es": "Se agregaron verificaciones de integridad simples para los datos de Life360.",
-                "pl": "Dodano proste kontrole integralności danych Life360.",
-                "zh-cn": "添加了对Life360数据的简单完整性检查。"
-            },
-            "0.2.2": {
-                "en": "The adapter will remove stale datapoints.",
-                "de": "Der Adapter entfernt veraltete Datenpunkte.",
-                "ru": "Адаптер удалит устаревшие точки данных.",
-                "pt": "O adaptador removerá pontos de dados antigos.",
-                "nl": "De adapter verwijdert verouderde datapunten.",
-                "fr": "L'adaptateur supprimera les points de données périmés.",
-                "it": "L'adattatore rimuoverà punti dati non aggiornati.",
-                "es": "El adaptador eliminará los puntos de datos obsoletos.",
-                "pl": "Adapter usunie przestarzałe punkty danych.",
-                "zh-cn": "适配器将删除陈旧的数据点。"
-            },
-            "0.2.1": {
-                "en": "MyPlaces: Add additional places apart from the Life360 ones.",
-                "de": "MyPlaces: Fügen Sie neben den Life360-Orten weitere hinzu.",
-                "ru": "MyPlaces: добавьте дополнительные места помимо Life360.",
-                "pt": "MyPlaces: adicione outros locais além dos Life360.",
-                "nl": "MyPlaces: voeg extra plaatsen toe, behalve de Life360.",
-                "fr": "MyPlaces: Ajoutez des lieux supplémentaires en dehors de Life360.",
-                "it": "MyPlaces: aggiungi altri posti oltre a quelli di Life360.",
-                "es": "MyPlaces: agregue lugares adicionales además de los Life360.",
-                "pl": "MyPlaces: Dodaj dodatkowe miejsca oprócz Life360.",
-                "zh-cn": "MyPlaces：添加除Life360之外的其他地方。"
-            },
-            "0.1.1": {
-                "en": "First release",
-                "de": "Erstes Release",
-                "ru": "Первый выпуск",
-                "pt": "Primeiro lançamento",
-                "nl": "Eerste uitgave",
-                "fr": "Première sortie",
-                "it": "Prima uscita",
-                "es": "Primer lanzamiento",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "初版"
-            },
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
             }
         },
         "title": "Life360",

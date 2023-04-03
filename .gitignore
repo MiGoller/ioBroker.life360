@@ -15,3 +15,7 @@ admin/i18n/*/flat.txt
 
 # iobroker dev files
 iob_npm.done
+
+
+# ioBroker dev-server
+.dev-server/

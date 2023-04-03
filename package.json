@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^2.5.1",
+    "@iobroker/dev-server": "^0.6.0",
     "bluebird": "^3.7.2",
     "geolocation-utils": "^1.2.5",
     "request": "^2.88.2",
@@ -54,7 +55,8 @@
     "test:integration": "mocha test/integration --exit",
     "test": "npm run test:js && npm run test:package",
     "lint": "eslint",
-    "debug": "nodemon --inspect-brk ./main.js --debug 0"
+    "debug": "nodemon --inspect-brk ./main.js --debug 0",
+    "dev-server": "dev-server"
   },
   "bugs": {
     "url": "https://github.com/MiGoller/ioBroker.life360/issues"

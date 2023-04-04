@@ -33,3 +33,6 @@ maintenance/**
 
 # dev-server
 .dev-server/
+
+# any dot-file
+.*

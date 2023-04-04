@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.19",
+        "version": "0.2.20",
         "news": {
+            "0.2.20": {
+                "en": "Fix for issue #73: Uncaught exception.",
+                "de": "Behebung von Problem Nr. 73: Nicht erfasste Ausnahme.",
+                "ru": "Исправление ошибки № 73: неперехваченное исключение.",
+                "pt": "Correção para o problema nº 73: exceção não capturada.",
+                "nl": "Oplossing voor probleem #73: niet-afgevangen uitzondering.",
+                "fr": "Correction du problème n° 73 : Exception non détectée.",
+                "it": "Correzione del problema n. 73: eccezione non rilevata.",
+                "es": "Corrección del problema n.º 73: excepción no detectada.",
+                "pl": "Poprawka dotycząca problemu nr 73: Nieprzechwycony wyjątek.",
+                "zh-cn": "修复问题 #73：未捕获的异常。"
+            },
             "0.2.19": {
                 "en": "Fix for issue #64: Adapter v.0.2.18 fails to login",
                 "de": "Behebung von Problem Nr. 64: Adapter v.0.2.18 kann sich nicht anmelden",

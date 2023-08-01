@@ -125,8 +125,7 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 0.2.21 (2023-08-01)
 
 - (MiGoller) Fix for issue [#76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. Überprüfen Sie Ihre Anmeldedaten!](https://github.com/MiGoller/ioBroker.life360/issues/76)
 - (MiGoller) Adopted Life360 API headers for Life360 API changes
@@ -149,7 +148,6 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 - (PeterVoronov) Fix for issue [#41: Fix for error in publishCirclePlaces "Cannot read property 'val' of null](https://github.com/MiGoller/ioBroker.life360/pull/41)
 - (MiGoller) Fix for issue [#44: V 0.2.16 warnung no places found](https://github.com/MiGoller/ioBroker.life360/issues/44)
 - (MiGoller) Fix for issue [#47: Keine Sonderzeichen möglich](https://github.com/MiGoller/ioBroker.life360/issues/47)
-
 
 ### 0.2.16 (2021-07-12)
 

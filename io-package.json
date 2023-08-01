@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.20",
+        "version": "0.2.21",
         "news": {
+            "0.2.21": {
+                "en": "Fix for issue #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. Überprüfen Sie Ihre Anmeldedaten!",
+                "de": "Fix für Problem Nr. 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "ru": "Исправление ошибки № 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "pt": "Correção para o problema nº 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "nl": "Oplossing voor probleem #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "fr": "Correction du problème n° 76 : Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "it": "Correzione del problema #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "es": "Solución para el problema n.º 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "pl": "Poprawka dotycząca problemu nr 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+                "zh-cn": "修复问题 #76：Die Verbindung wurde hergestellt，die Authentifizierung konnte jedoch nicht durchgeführt werden。 "
+            },
             "0.2.20": {
                 "en": "Fix for issue #73: Uncaught exception.",
                 "de": "Behebung von Problem Nr. 73: Nicht erfasste Ausnahme.",

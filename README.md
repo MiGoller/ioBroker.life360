@@ -121,20 +121,34 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
 
 ## Changelog
 
+<!--
+  Placeholder for the next version (at the beginning of the line):
+  ### **WORK IN PROGRESS**
+-->
+
+### **WORK IN PROGRESS**
+
+- (MiGoller) Fix for issue [#76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. Überprüfen Sie Ihre Anmeldedaten!](https://github.com/MiGoller/ioBroker.life360/issues/76)
+- (MiGoller) Adopted Life360 API headers for Life360 API changes
+- (MiGoller) Bumped dependencies
+
 ### 0.2.20 (2023-04-04)
-* (MiGoller) Fix for issue #73: Uncaught exception
+
+- (MiGoller) Fix for issue #73: Uncaught exception
 
 ### 0.2.19 (2022-11-09)
-* (MiGoller) Fix for issue #64: Adapter v.0.2.18 fails to login
+
+- (MiGoller) Fix for issue #64: Adapter v.0.2.18 fails to login
 
 ### 0.2.18 (2022-06-10)
-* (MiGoller) Fix for issue #59: Adapter fails to authenticate after Life360 API changed.
+
+- (MiGoller) Fix for issue #59: Adapter fails to authenticate after Life360 API changed.
 
 ### 0.2.17 (2021-11-21)
 
-* (PeterVoronov) Fix for issue [#41: Fix for error in publishCirclePlaces "Cannot read property 'val' of null](https://github.com/MiGoller/ioBroker.life360/pull/41)
-* (MiGoller) Fix for issue [#44: V 0.2.16 warnung no places found](https://github.com/MiGoller/ioBroker.life360/issues/44)
-* (MiGoller) Fix for issue [#47: Keine Sonderzeichen möglich](https://github.com/MiGoller/ioBroker.life360/issues/47)
+- (PeterVoronov) Fix for issue [#41: Fix for error in publishCirclePlaces "Cannot read property 'val' of null](https://github.com/MiGoller/ioBroker.life360/pull/41)
+- (MiGoller) Fix for issue [#44: V 0.2.16 warnung no places found](https://github.com/MiGoller/ioBroker.life360/issues/44)
+- (MiGoller) Fix for issue [#47: Keine Sonderzeichen möglich](https://github.com/MiGoller/ioBroker.life360/issues/47)
 
 
 ### 0.2.16 (2021-07-12)

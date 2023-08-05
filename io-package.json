@@ -1,378 +1,267 @@
 {
-    "common": {
-        "name": "life360",
-        "version": "0.2.18",
-        "news": {
-            "0.2.18": {
-                "en": "Fix for issue #59: Adapter fails to authenticate after Life360 API changed.",
-                "de": "Behebung von Problem Nr. 59: Adapter kann sich nicht authentifizieren, nachdem die Life360-API geändert wurde.",
-                "ru": "Исправление ошибки № 59: адаптер не проходит аутентификацию после изменения API Life360.",
-                "pt": "Correção para o problema nº 59: o adaptador falha ao autenticar após a alteração da API Life360.",
-                "nl": "Oplossing voor probleem #59: de adapter kan niet worden geverifieerd nadat de Life360 API is gewijzigd.",
-                "fr": "Correction du problème n° 59 : l'adaptateur ne parvient pas à s'authentifier après la modification de l'API Life360.",
-                "it": "Risolto il problema n. 59: l'adattatore non riesce ad autenticarsi dopo la modifica dell'API Life360.",
-                "es": "Solución para el problema n.° 59: el adaptador no se autentica después de que se cambió la API de Life360.",
-                "pl": "Naprawiono błąd nr 59: uwierzytelnianie adaptera nie powiodło się po zmianie interfejsu Life360 API.",
-                "zh-cn": "修复问题 #59：Life360 API 更改后适配器无法进行身份验证。"
-            },
-            "0.2.17": {
-                "en": "Multiple bugfixes.",
-                "de": "Mehrere Bugfixes.",
-                "ru": "Множественные исправления.",
-                "pt": "Várias correções de bugs.",
-                "nl": "Meerdere bugfixes.",
-                "fr": "Plusieurs corrections de bugs.",
-                "it": "Molteplici correzioni di bug.",
-                "es": "Varias correcciones de errores.",
-                "pl": "Wiele poprawek.",
-                "zh-cn": "多个错误修正。"
-            },
-            "0.2.16": {
-                "en": "Fix for issue #39: Don't let the adapter crash if the Life360 API returns a server error. \nFix for issue #35: ioBroker complains about writing to a read-only state on adapter startup.",
-                "de": "Behebung von Problem Nr. 39: Lassen Sie den Adapter nicht abstürzen, wenn die Life360-API einen Serverfehler zurückgibt. \nBehebung von Problem Nr. 35: ioBroker complains about writing to a read-only state on adapter startup.",
-                "ru": "Исправление проблемы №39: не допускайте сбоя адаптера, если Life360 API возвращает ошибку сервера. ",
-                "pt": "Correção para o problema nº 39: não deixe o adaptador travar se a API Life360 retornar um erro de servidor. ",
-                "nl": "Oplossing voor probleem #39: laat de adapter niet crashen als de Life360 API een serverfout retourneert. ",
-                "fr": "Correction du problème n° 39 : ne laissez pas l'adaptateur planter si l'API Life360 renvoie une erreur de serveur. ",
-                "it": "Correzione per il problema n. 39: non consentire l'arresto anomalo dell'adattatore se l'API Life360 restituisce un errore del server. ",
-                "es": "Solución para el problema n. ° 39: no permita que el adaptador se bloquee si la API Life360 devuelve un error del servidor. ",
-                "pl": "Poprawka dotycząca problemu nr 39: Nie pozwól, aby adapter uległ awarii, jeśli interfejs API Life360 zwróci błąd serwera. ",
-                "zh-cn": "修复问题 #39：如果 Life360 API 返回服务器错误，不要让适配器崩溃。"
-            },
-            "0.2.15": {
-                "en": "Minor enhancements and bugfixes.",
-                "de": "Kleinere Verbesserungen und Bugfixes.",
-                "ru": "Незначительные улучшения и исправления.",
-                "pt": "Pequenos aprimoramentos e correções de bugs.",
-                "nl": "Kleine verbeteringen en bugfixes.",
-                "fr": "Améliorations mineures et corrections de bogues.",
-                "it": "Miglioramenti minori e correzioni di bug.",
-                "es": "Pequeñas mejoras y correcciones de errores.",
-                "pl": "Drobne ulepszenia i poprawki błędów.",
-                "zh-cn": "次要增强功能和错误修正。"
-            },
-            "0.2.14": {
-                "en": "Fix for issue #27: Adapter looses places (connection)",
-                "de": "Fix für Problem Nr. 27: Adapter verliert Plätze (Verbindung)",
-                "ru": "Исправление проблемы №27: адаптер теряет места (соединение)",
-                "pt": "Correção para o problema nº 27: o adaptador perde lugares (conexão)",
-                "nl": "Oplossing voor probleem # 27: adapter verliest plaatsen (verbinding)",
-                "fr": "Correction du problème n ° 27: l'adaptateur perd des places (connexion)",
-                "it": "Risolto il problema n. 27: l'adattatore perde posti (connessione)",
-                "es": "Solución para el problema n. ° 27: el adaptador pierde lugares (conexión)",
-                "pl": "Poprawka dla problemu nr 27: Adapter traci miejsca (połączenie)",
-                "zh-cn": "解决问题27的方法：适配器失去空间（连接）"
-            },
-            "0.2.13": {
-                "en": "PeterVoronov's pull request #24: Allow to create states with \"write\": false, to make value.gps.* compatible with ioBroker.type-detector.",
-                "de": "PeterVoronovs Pull-Anfrage Nr. 24: Erlaube das Erstellen von Zuständen mit \"write\": false, um value.gps. * Kompatibel mit ioBroker.type-detector zu machen.",
-                "ru": "Пул-реквест Петра Воронова №24: Разрешить создавать состояния с \"write\": false, чтобы сделать value.gps. * Совместимым с ioBroker.type-Detector.",
-                "pt": "Solicitação de pull de PeterVoronov # 24: Permite criar estados com \"write\": false, para tornar value.gps. * Compatível com ioBroker.type-detector.",
-                "nl": "PeterVoronov's pull request # 24: Sta toe om toestanden te creëren met \"write\": false, om value.gps. * Compatibel te maken met ioBroker.type-detector.",
-                "fr": "Pull request # 24 de PeterVoronov: Permet de créer des états avec \"write\": false, pour rendre value.gps. * Compatible avec ioBroker.type-detector.",
-                "it": "La richiesta pull di PeterVoronov # 24: consente di creare stati con \"write\": false, per rendere value.gps. * Compatibile con ioBroker.type-detector.",
-                "es": "Pull request # 24 de PeterVoronov: Permitir crear estados con \"write\": false, para hacer que value.gps. * Sea compatible con ioBroker.type-detector.",
-                "pl": "Żądanie ściągnięcia Petera Voronova nr 24: Zezwól na tworzenie stanów z \"write\": false, aby wartość value.gps. * Była kompatybilna z detektorem ioBroker.type.",
-                "zh-cn": "PeterVoronov的拉取请求＃24：允许使用“ write”：false创建状态，以使value.gps。*与ioBroker.type-detector兼容。"
-            },
-            "0.2.12": {
-                "en": "Fix for issue #22: MyPlaces feature does not show all members",
-                "de": "Fix für Problem Nr. 22: Die MyPlaces-Funktion zeigt nicht alle Mitglieder an",
-                "ru": "Исправление проблемы №22: функция MyPlaces не отображает всех участников",
-                "pt": "Correção para o problema nº 22: o recurso MyPlaces não mostra todos os membros",
-                "nl": "Oplossing voor probleem 22: de functie MyPlaces toont niet alle leden",
-                "fr": "Correction du problème n ° 22: la fonctionnalité MyPlaces n'affiche pas tous les membres",
-                "it": "Risolto il problema # 22: la funzione MyPlaces non mostra tutti i membri",
-                "es": "Solución para el problema n. ° 22: la función MyPlaces no muestra a todos los miembros",
-                "pl": "Poprawka dla problemu nr 22: funkcja MyPlaces nie wyświetla wszystkich członków",
-                "zh-cn": "解决问题＃22：MyPlaces功能未显示所有成员"
-            },
-            "0.2.11": {
-                "en": "Added verbose logging on demand",
-                "de": "Ausführliche Protokollierung bei Bedarf hinzugefügt",
-                "ru": "Добавлен подробный журнал по запросу",
-                "pt": "Adicionado registro detalhado sob demanda",
-                "nl": "Uitgebreide logboekregistratie toegevoegd op aanvraag",
-                "fr": "Ajout de la journalisation détaillée à la demande",
-                "it": "Aggiunta la registrazione dettagliata su richiesta",
-                "es": "Se agregó un registro detallado a pedido",
-                "pl": "Dodano szczegółowe logowanie na żądanie",
-                "zh-cn": "按需添加了详细的日志记录"
-            },
-            "0.2.10": {
-                "en": "Fix for Issue #18: Error TypeError: Cannot read property 'sourceId' of null since update to 0.2.8",
-                "de": "Behebung von Problem Nr. 18: Fehlertyp Fehler: Die Eigenschaft 'sourceId' von null kann seit der Aktualisierung auf 0.2.8 nicht gelesen werden",
-                "ru": "Исправление проблемы № 18: ошибка типа Ошибка: невозможно прочитать свойство sourceId, равное null, с момента обновления до 0.2.8",
-                "pt": "Correção para o problema nº 18: Erro TypeError: não é possível ler a propriedade 'sourceId' de nulo desde a atualização para 0.2.8",
-                "nl": "Oplossing voor probleem 18: fout TypeError: kan eigenschap 'sourceId' van null niet lezen sinds update naar 0.2.8",
-                "fr": "Correction du problème n ° 18: Erreur TypeError: Impossible de lire la propriété 'sourceId' de null depuis la mise à jour vers 0.2.8",
-                "it": "Correzione per il problema n. 18: Errore TypeError: Impossibile leggere la proprietà \"sourceId\" di null dall'aggiornamento a 0.2.8",
-                "es": "Solución para el problema n. ° 18: Error TypeError: no se puede leer la propiedad 'sourceId' de null desde la actualización a 0.2.8",
-                "pl": "Poprawka problemu nr 18: Błąd typu Błąd: Nie można odczytać właściwości „sourceId” o wartości null od czasu aktualizacji do wersji 0.2.8",
-                "zh-cn": "问题18的修复：错误类型错误：自更新至0.2.8后，无法读取null的属性'sourceId'"
-            },
-            "0.2.9": {
-                "en": "Removed node v8 from Travis config to fix build process.",
-                "de": "Node v8 wurde aus der Travis-Konfiguration entfernt, um den Erstellungsprozess zu korrigieren.",
-                "ru": "Удален узел v8 из конфигурации Travis, чтобы исправить процесс сборки.",
-                "pt": "Removido o nó v8 da configuração do Travis para corrigir o processo de construção.",
-                "nl": "Node v8 verwijderd uit Travis-configuratie om het bouwproces te repareren.",
-                "fr": "Suppression du node v8 de la configuration de Travis pour corriger le processus de construction.",
-                "it": "Rimosso il node v8 dalla configurazione di Travis per correggere il processo di compilazione.",
-                "es": "Se eliminó el node v8 de la configuración de Travis para corregir el proceso de compilación.",
-                "pl": "Usunięto node v8 z konfiguracji Travisa, aby naprawić proces kompilacji.",
-                "zh-cn": "从Travis配置中删除了节点v8，以修复构建过程。"
-            },
-            "0.2.8": {
-                "en": "Upgraded several packages to wanted versions.",
-                "de": "Mehrere Pakete wurden auf die gewünschten Versionen aktualisiert.",
-                "ru": "Обновил несколько пакетов до желаемых версий.",
-                "pt": "Vários pacotes atualizados para as versões desejadas.",
-                "nl": "Meerdere pakketten geüpgraded naar gewenste versies.",
-                "fr": "Mise à niveau de plusieurs packages vers les versions souhaitées.",
-                "it": "Aggiornati diversi pacchetti alle versioni desiderate.",
-                "es": "Se actualizaron varios paquetes a las versiones deseadas.",
-                "pl": "Zaktualizowałem kilka pakietów do pożądanych wersji.",
-                "zh-cn": "将几个软件包升级到所需版本。"
-            },
-            "0.2.7": {
-                "en": "Upgraded lodash from 4.17.15 to 4.17.19",
-                "de": "Upgrade von lodash von 4.17.15 auf 4.17.19",
-                "ru": "Обновлен lodash с 4.17.15 до 4.17.19",
-                "pt": "Lodash atualizado de 4.17.15 para 4.17.19",
-                "nl": "Opgewaardeerde lodash van 4.17.15 naar 4.17.19",
-                "fr": "Lodash amélioré de 4.17.15 à 4.17.19",
-                "it": "Lodash aggiornato dal 4.17.15 al 4.17.19",
-                "es": "Lodash actualizado de 4.17.15 a 4.17.19",
-                "pl": "Ulepszono lodash z 4.17.15 do 4.17.19",
-                "zh-cn": "将lodash从4.17.15升级到4.17.19"
-            },
-            "0.2.6": {
-                "en": "Bugfix for issue #12: Uncaught exception: Cannot read property 'timestamp' of null",
-                "de": "Fehlerbehebung für Problem Nr. 12: Nicht erfasste Ausnahme: Die Eigenschaft 'timestamp' von null kann nicht gelesen werden",
-                "ru": "Исправление ошибки для проблемы № 12: необработанное исключение: невозможно прочитать свойство 'timestamp' из null",
-                "pt": "Correção de bug para o problema 12: Exceção não capturada: Não é possível ler a propriedade 'timestamp' de null",
-                "nl": "Bugfix voor probleem # 12: niet-afgevangen uitzondering: kan eigenschap 'tijdstempel' van null niet lezen",
-                "fr": "Correction d'un bug pour le problème # 12: exception non interceptée: impossible de lire la propriété «horodatage» de null",
-                "it": "Correzione di bug per il problema n. 12: eccezione non rilevata: impossibile leggere la proprietà 'timestamp' di null",
-                "es": "Corrección de errores para el problema # 12: excepción no detectada: no se puede leer la propiedad 'marca de tiempo' de nulo",
-                "pl": "Poprawka błędu dla problemu nr 12: Nieprzechwycony wyjątek: Nie można odczytać właściwości „znacznik czasu” wartości null",
-                "zh-cn": "问题12的错误修复：未捕获的异常：无法读取null的属性“时间戳”"
-            },
-            "0.2.5": {
-                "en": "Bug fix for issue #9: check Adapter with js-controller 3.0.x.",
-                "de": "Fehlerbehebung für Problem Nr. 9: Überprüfen Sie den Adapter mit js-controller 3.0.x.",
-                "ru": "Исправление ошибки для проблемы № 9: проверьте адаптер с помощью js-controller 3.0.x.",
-                "pt": "Correção de bug para o problema # 9: verifique o Adaptador com o js-controller 3.0.x.",
-                "nl": "Bugfix voor probleem # 9: controleer Adapter met js-controller 3.0.x.",
-                "fr": "Correction d'un bug pour le problème # 9: vérifiez l'adaptateur avec js-controller 3.0.x.",
-                "it": "Correzione di bug per il problema n. 9: controllare l'adattatore con js-controller 3.0.x.",
-                "es": "Corrección de errores para el problema # 9: verifique el Adaptador con js-controller 3.0.x.",
-                "pl": "Poprawka błędu dla problemu nr 9: sprawdź Adapter z kontrolerem js 3.0.x.",
-                "zh-cn": "问题9的错误修复：使用js-controller 3.0.x检查适配器。"
-            },
-            "0.2.4": {
-                "en": "Clean up stale datapoints after 30 days to prevent removing datapoints when Life360 is not available.",
-                "de": "Bereinigen Sie veraltete Datenpunkte nach 30 Tagen, um zu verhindern, dass Datenpunkte entfernt werden, wenn Life360 nicht verfügbar ist.",
-                "ru": "Очистите устаревшие точки данных через 30 дней, чтобы предотвратить удаление точек данных, когда Life360 недоступен.",
-                "pt": "Limpe os pontos de dados antigos após 30 dias para evitar a remoção de pontos de dados quando o Life360 não estiver disponível.",
-                "nl": "Ruim oude datapunten op na 30 dagen om te voorkomen dat datapunten worden verwijderd wanneer Life360 niet beschikbaar is.",
-                "fr": "Nettoyez les points de données périmés après 30 jours pour éviter de les supprimer lorsque Life360 n’est pas disponible.",
-                "it": "Elimina i punti dati non aggiornati dopo 30 giorni per impedire la rimozione dei punti dati quando Life360 non è disponibile.",
-                "es": "Limpie los puntos de datos obsoletos después de 30 días para evitar la eliminación de puntos de datos cuando Life360 no esté disponible.",
-                "pl": "Wyczyść nieaktualne punkty danych po 30 dniach, aby zapobiec ich usuwaniu, gdy Life360 nie jest dostępny.",
-                "zh-cn": "30天后清理陈旧的数据点，以防止在Life360不可用时删除数据点。"
-            },
-            "0.2.3": {
-                "en": "Added simple integrity checks for Life360 data.",
-                "de": "Einfache Integritätsprüfungen für Life360-Daten hinzugefügt.",
-                "ru": "Добавлены простые проверки целостности данных Life360.",
-                "pt": "Adicionadas verificações simples de integridade dos dados Life360.",
-                "nl": "Eenvoudige integriteitscontroles voor Life360-gegevens toegevoegd.",
-                "fr": "Ajout de simples contrôles d'intégrité pour les données Life360.",
-                "it": "Aggiunti semplici controlli di integrità per i dati Life360.",
-                "es": "Se agregaron verificaciones de integridad simples para los datos de Life360.",
-                "pl": "Dodano proste kontrole integralności danych Life360.",
-                "zh-cn": "添加了对Life360数据的简单完整性检查。"
-            },
-            "0.2.2": {
-                "en": "The adapter will remove stale datapoints.",
-                "de": "Der Adapter entfernt veraltete Datenpunkte.",
-                "ru": "Адаптер удалит устаревшие точки данных.",
-                "pt": "O adaptador removerá pontos de dados antigos.",
-                "nl": "De adapter verwijdert verouderde datapunten.",
-                "fr": "L'adaptateur supprimera les points de données périmés.",
-                "it": "L'adattatore rimuoverà punti dati non aggiornati.",
-                "es": "El adaptador eliminará los puntos de datos obsoletos.",
-                "pl": "Adapter usunie przestarzałe punkty danych.",
-                "zh-cn": "适配器将删除陈旧的数据点。"
-            },
-            "0.2.1": {
-                "en": "MyPlaces: Add additional places apart from the Life360 ones.",
-                "de": "MyPlaces: Fügen Sie neben den Life360-Orten weitere hinzu.",
-                "ru": "MyPlaces: добавьте дополнительные места помимо Life360.",
-                "pt": "MyPlaces: adicione outros locais além dos Life360.",
-                "nl": "MyPlaces: voeg extra plaatsen toe, behalve de Life360.",
-                "fr": "MyPlaces: Ajoutez des lieux supplémentaires en dehors de Life360.",
-                "it": "MyPlaces: aggiungi altri posti oltre a quelli di Life360.",
-                "es": "MyPlaces: agregue lugares adicionales además de los Life360.",
-                "pl": "MyPlaces: Dodaj dodatkowe miejsca oprócz Life360.",
-                "zh-cn": "MyPlaces：添加除Life360之外的其他地方。"
-            },
-            "0.1.1": {
-                "en": "First release",
-                "de": "Erstes Release",
-                "ru": "Первый выпуск",
-                "pt": "Primeiro lançamento",
-                "nl": "Eerste uitgave",
-                "fr": "Première sortie",
-                "it": "Prima uscita",
-                "es": "Primer lanzamiento",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "初版"
-            },
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "title": "Life360",
-        "titleLang": {
-            "en": "Life360",
-            "de": "Life360",
-            "ru": "Life360",
-            "pt": "Life360",
-            "nl": "Life360",
-            "fr": "Life360",
-            "it": "Life360",
-            "es": "Life360",
-            "pl": "Life360",
-            "zh-cn": "Life360"
-        },
-        "desc": {
-            "en": "An ioBroker adapter for Life360.",
-            "de": "An ioBroker adapter for Life360.",
-            "ru": "An ioBroker adapter for Life360.",
-            "pt": "An ioBroker adapter for Life360.",
-            "nl": "An ioBroker adapter for Life360.",
-            "fr": "An ioBroker adapter for Life360.",
-            "it": "An ioBroker adapter for Life360.",
-            "es": "An ioBroker adapter for Life360.",
-            "pl": "An ioBroker adapter for Life360.",
-            "zh-cn": "An ioBroker adapter for Life360."
-        },
-        "authors": [
-            "migoller <goller.michael@gmail.com>"
-        ],
-        "keywords": [
-            "ioBroker",
-            "Life360",
-            "Smart Home",
-            "home automation"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "life360.png",
-        "enabled": false,
-        "extIcon": "https://raw.githubusercontent.com/MiGoller/ioBroker.life360/master/admin/life360.png",
-        "readme": "https://github.com/MiGoller/ioBroker.life360/blob/master/README.md",
-        "loglevel": "info",
-        "mode": "daemon",
-        "type": "geoposition",
-        "compact": true,
-        "materialize": true,
-        "stopTimeout ": 3000,
-        "dependencies": [
-            {
-                "js-controller": ">=1.4.2"
-            }
-        ],
-        "connectionType": "cloud",
-        "dataSource": "poll"
-    },
-    "native": {
-        "life360_username": "me@me.local",
-        "life360_password": "MySecretPassword",
-        "life360_phone": "",
-        "life360_countryCode": "",
-        "life360_polling_interval": "60",
-        "sendto_places_adapter_instance": -1,
-        "sendto_places_adapter_regexp": "",
-        "track_location_people": true,
-        "location_object_type": "LatLng",
-        "process_life360_circles": true,
-        "process_life360_places": true,
-        "process_life360_people": true,
-        "debugging_verbose": false
-    },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "name": "connected",
-                "desc": "Connected to Life360 cloud services?",
-                "type": "boolean",
-                "def": false,
-                "read": true,
-                "role": "value.info",
-                "write": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "circles",
-            "type": "device",
-            "common": {
-                "name": "Circles",
-                "desc": "Life360 circles."
-            },
-            "native": {}
-        },
-        {
-            "_id": "places",
-            "type": "device",
-            "common": {
-                "name": "Places",
-                "desc": "Life360 places."
-            },
-            "native": {}
-        },
-        {
-            "_id": "people",
-            "type": "device",
-            "common": {
-                "name": "People",
-                "desc": "Life360 people."
-            },
-            "native": {}
-        },
-        {
-            "_id": "myplaces",
-            "type": "device",
-            "common": {
-                "name": "My Places",
-                "desc": "Custom places apart from Life360."
-            },
-            "native": {}
-        }
-    ]
+	"common": {
+		"name": "life360",
+		"version": "0.2.21",
+		"news": {
+			"0.2.21": {
+				"en": "Fix for issue #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. Überprüfen Sie Ihre Anmeldedaten!",
+				"de": "Fix für Problem Nr. 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"ru": "Исправление ошибки № 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"pt": "Correção para o problema nº 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"nl": "Oplossing voor probleem #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"fr": "Correction du problème n° 76 : Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"it": "Correzione del problema #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"es": "Solución para el problema n.º 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"pl": "Poprawka dotycząca problemu nr 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",
+				"zh-cn": "修复问题 #76：Die Verbindung wurde hergestellt，die Authentifizierung konnte jedoch nicht durchgeführt werden。 "
+			},
+			"0.2.20": {
+				"en": "Fix for issue #73: Uncaught exception.",
+				"de": "Behebung von Problem Nr. 73: Nicht erfasste Ausnahme.",
+				"ru": "Исправление ошибки № 73: неперехваченное исключение.",
+				"pt": "Correção para o problema nº 73: exceção não capturada.",
+				"nl": "Oplossing voor probleem #73: niet-afgevangen uitzondering.",
+				"fr": "Correction du problème n° 73 : Exception non détectée.",
+				"it": "Correzione del problema n. 73: eccezione non rilevata.",
+				"es": "Corrección del problema n.º 73: excepción no detectada.",
+				"pl": "Poprawka dotycząca problemu nr 73: Nieprzechwycony wyjątek.",
+				"zh-cn": "修复问题 #73：未捕获的异常。"
+			},
+			"0.2.19": {
+				"en": "Fix for issue #64: Adapter v.0.2.18 fails to login",
+				"de": "Behebung von Problem Nr. 64: Adapter v.0.2.18 kann sich nicht anmelden",
+				"ru": "Исправление ошибки № 64: адаптер версии 0.2.18 не может войти в систему.",
+				"pt": "Correção para o problema nº 64: o adaptador v.0.2.18 falha ao fazer login",
+				"nl": "Oplossing voor probleem #64: Adapter v.0.2.18 kan niet inloggen",
+				"fr": "Correction du problème n° 64 : l'adaptateur v.0.2.18 ne parvient pas à se connecter",
+				"it": "Risolto il problema n. 64: l'adattatore v.0.2.18 non riesce ad accedere",
+				"es": "Solución para el problema n.º 64: el adaptador v.0.2.18 no puede iniciar sesión",
+				"pl": "Poprawka dla problemu #64: Adapter v.0.2.18 nie loguje się",
+				"zh-cn": "修复问题 #64：适配器 v.0.2.18 无法登录"
+			},
+			"0.2.18": {
+				"en": "Fix for issue #59: Adapter fails to authenticate after Life360 API changed.",
+				"de": "Behebung von Problem Nr. 59: Adapter kann sich nicht authentifizieren, nachdem die Life360-API geändert wurde.",
+				"ru": "Исправление ошибки № 59: адаптер не проходит аутентификацию после изменения API Life360.",
+				"pt": "Correção para o problema nº 59: o adaptador falha ao autenticar após a alteração da API Life360.",
+				"nl": "Oplossing voor probleem #59: de adapter kan niet worden geverifieerd nadat de Life360 API is gewijzigd.",
+				"fr": "Correction du problème n° 59 : l'adaptateur ne parvient pas à s'authentifier après la modification de l'API Life360.",
+				"it": "Risolto il problema n. 59: l'adattatore non riesce ad autenticarsi dopo la modifica dell'API Life360.",
+				"es": "Solución para el problema n.° 59: el adaptador no se autentica después de que se cambió la API de Life360.",
+				"pl": "Naprawiono błąd nr 59: uwierzytelnianie adaptera nie powiodło się po zmianie interfejsu Life360 API.",
+				"zh-cn": "修复问题 #59：Life360 API 更改后适配器无法进行身份验证。"
+			},
+			"0.2.17": {
+				"en": "Multiple bugfixes.",
+				"de": "Mehrere Bugfixes.",
+				"ru": "Множественные исправления.",
+				"pt": "Várias correções de bugs.",
+				"nl": "Meerdere bugfixes.",
+				"fr": "Plusieurs corrections de bugs.",
+				"it": "Molteplici correzioni di bug.",
+				"es": "Varias correcciones de errores.",
+				"pl": "Wiele poprawek.",
+				"zh-cn": "多个错误修正。"
+			},
+			"0.2.16": {
+				"en": "Fix for issue #39: Don't let the adapter crash if the Life360 API returns a server error. \nFix for issue #35: ioBroker complains about writing to a read-only state on adapter startup.",
+				"de": "Behebung von Problem Nr. 39: Lassen Sie den Adapter nicht abstürzen, wenn die Life360-API einen Serverfehler zurückgibt. \nBehebung von Problem Nr. 35: ioBroker complains about writing to a read-only state on adapter startup.",
+				"ru": "Исправление проблемы №39: не допускайте сбоя адаптера, если Life360 API возвращает ошибку сервера. ",
+				"pt": "Correção para o problema nº 39: não deixe o adaptador travar se a API Life360 retornar um erro de servidor. ",
+				"nl": "Oplossing voor probleem #39: laat de adapter niet crashen als de Life360 API een serverfout retourneert. ",
+				"fr": "Correction du problème n° 39 : ne laissez pas l'adaptateur planter si l'API Life360 renvoie une erreur de serveur. ",
+				"it": "Correzione per il problema n. 39: non consentire l'arresto anomalo dell'adattatore se l'API Life360 restituisce un errore del server. ",
+				"es": "Solución para el problema n. ° 39: no permita que el adaptador se bloquee si la API Life360 devuelve un error del servidor. ",
+				"pl": "Poprawka dotycząca problemu nr 39: Nie pozwól, aby adapter uległ awarii, jeśli interfejs API Life360 zwróci błąd serwera. ",
+				"zh-cn": "修复问题 #39：如果 Life360 API 返回服务器错误，不要让适配器崩溃。"
+			},
+			"0.2.15": {
+				"en": "Minor enhancements and bugfixes.",
+				"de": "Kleinere Verbesserungen und Bugfixes.",
+				"ru": "Незначительные улучшения и исправления.",
+				"pt": "Pequenos aprimoramentos e correções de bugs.",
+				"nl": "Kleine verbeteringen en bugfixes.",
+				"fr": "Améliorations mineures et corrections de bogues.",
+				"it": "Miglioramenti minori e correzioni di bug.",
+				"es": "Pequeñas mejoras y correcciones de errores.",
+				"pl": "Drobne ulepszenia i poprawki błędów.",
+				"zh-cn": "次要增强功能和错误修正。"
+			},
+			"0.2.14": {
+				"en": "Fix for issue #27: Adapter looses places (connection)",
+				"de": "Fix für Problem Nr. 27: Adapter verliert Plätze (Verbindung)",
+				"ru": "Исправление проблемы №27: адаптер теряет места (соединение)",
+				"pt": "Correção para o problema nº 27: o adaptador perde lugares (conexão)",
+				"nl": "Oplossing voor probleem # 27: adapter verliest plaatsen (verbinding)",
+				"fr": "Correction du problème n ° 27: l'adaptateur perd des places (connexion)",
+				"it": "Risolto il problema n. 27: l'adattatore perde posti (connessione)",
+				"es": "Solución para el problema n. ° 27: el adaptador pierde lugares (conexión)",
+				"pl": "Poprawka dla problemu nr 27: Adapter traci miejsca (połączenie)",
+				"zh-cn": "解决问题27的方法：适配器失去空间（连接）"
+			},
+			"0.2.13": {
+				"en": "PeterVoronov's pull request #24: Allow to create states with \"write\": false, to make value.gps.* compatible with ioBroker.type-detector.",
+				"de": "PeterVoronovs Pull-Anfrage Nr. 24: Erlaube das Erstellen von Zuständen mit \"write\": false, um value.gps. * Kompatibel mit ioBroker.type-detector zu machen.",
+				"ru": "Пул-реквест Петра Воронова №24: Разрешить создавать состояния с \"write\": false, чтобы сделать value.gps. * Совместимым с ioBroker.type-Detector.",
+				"pt": "Solicitação de pull de PeterVoronov # 24: Permite criar estados com \"write\": false, para tornar value.gps. * Compatível com ioBroker.type-detector.",
+				"nl": "PeterVoronov's pull request # 24: Sta toe om toestanden te creëren met \"write\": false, om value.gps. * Compatibel te maken met ioBroker.type-detector.",
+				"fr": "Pull request # 24 de PeterVoronov: Permet de créer des états avec \"write\": false, pour rendre value.gps. * Compatible avec ioBroker.type-detector.",
+				"it": "La richiesta pull di PeterVoronov # 24: consente di creare stati con \"write\": false, per rendere value.gps. * Compatibile con ioBroker.type-detector.",
+				"es": "Pull request # 24 de PeterVoronov: Permitir crear estados con \"write\": false, para hacer que value.gps. * Sea compatible con ioBroker.type-detector.",
+				"pl": "Żądanie ściągnięcia Petera Voronova nr 24: Zezwól na tworzenie stanów z \"write\": false, aby wartość value.gps. * Była kompatybilna z detektorem ioBroker.type.",
+				"zh-cn": "PeterVoronov的拉取请求＃24：允许使用“ write”：false创建状态，以使value.gps。*与ioBroker.type-detector兼容。"
+			},
+			"0.2.12": {
+				"en": "Fix for issue #22: MyPlaces feature does not show all members",
+				"de": "Fix für Problem Nr. 22: Die MyPlaces-Funktion zeigt nicht alle Mitglieder an",
+				"ru": "Исправление проблемы №22: функция MyPlaces не отображает всех участников",
+				"pt": "Correção para o problema nº 22: o recurso MyPlaces não mostra todos os membros",
+				"nl": "Oplossing voor probleem 22: de functie MyPlaces toont niet alle leden",
+				"fr": "Correction du problème n ° 22: la fonctionnalité MyPlaces n'affiche pas tous les membres",
+				"it": "Risolto il problema # 22: la funzione MyPlaces non mostra tutti i membri",
+				"es": "Solución para el problema n. ° 22: la función MyPlaces no muestra a todos los miembros",
+				"pl": "Poprawka dla problemu nr 22: funkcja MyPlaces nie wyświetla wszystkich członków",
+				"zh-cn": "解决问题＃22：MyPlaces功能未显示所有成员"
+			},
+			"0.2.11": {
+				"en": "Added verbose logging on demand",
+				"de": "Ausführliche Protokollierung bei Bedarf hinzugefügt",
+				"ru": "Добавлен подробный журнал по запросу",
+				"pt": "Adicionado registro detalhado sob demanda",
+				"nl": "Uitgebreide logboekregistratie toegevoegd op aanvraag",
+				"fr": "Ajout de la journalisation détaillée à la demande",
+				"it": "Aggiunta la registrazione dettagliata su richiesta",
+				"es": "Se agregó un registro detallado a pedido",
+				"pl": "Dodano szczegółowe logowanie na żądanie",
+				"zh-cn": "按需添加了详细的日志记录"
+			}
+		},
+		"title": "Life360",
+		"titleLang": {
+			"en": "Life360",
+			"de": "Life360",
+			"ru": "Life360",
+			"pt": "Life360",
+			"nl": "Life360",
+			"fr": "Life360",
+			"it": "Life360",
+			"es": "Life360",
+			"pl": "Life360",
+			"zh-cn": "Life360"
+		},
+		"desc": {
+			"en": "An open source ioBroker adapter for Life360."
+		},
+		"authors": [
+			"MiGoller <migoller@mail.de>"
+		],
+		"keywords": [
+			"ioBroker",
+			"life360",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "life360.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/MiGoller/ioBroker.life360/main/admin/life360.png",
+		"readme": "https://github.com/MiGoller/ioBroker.life360/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "geoposition",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "materialize"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.0.0"
+			}
+		]
+	},
+	"native": {
+		"life360_username": "me@me.local",
+		"life360_password": "MySecretPassword",
+		"life360_phone": "",
+		"life360_countryCode": "",
+		"life360_polling_interval": "60",
+		"sendto_places_adapter_instance": -1,
+		"sendto_places_adapter_regexp": "",
+		"track_location_people": true,
+		"location_object_type": "LatLng",
+		"process_life360_circles": true,
+		"process_life360_places": true,
+		"process_life360_people": true,
+		"debugging_verbose": false
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"name": "connected",
+				"desc": "Connected to Life360 cloud services?",
+				"type": "boolean",
+				"def": false,
+				"read": true,
+				"role": "value.info",
+				"write": false
+			},
+			"native": {}
+		},
+		{
+			"_id": "circles",
+			"type": "device",
+			"common": {
+				"name": "Circles",
+				"desc": "Life360 circles."
+			},
+			"native": {}
+		},
+		{
+			"_id": "places",
+			"type": "device",
+			"common": {
+				"name": "Places",
+				"desc": "Life360 places."
+			},
+			"native": {}
+		},
+		{
+			"_id": "people",
+			"type": "device",
+			"common": {
+				"name": "People",
+				"desc": "Life360 people."
+			},
+			"native": {}
+		},
+		{
+			"_id": "myplaces",
+			"type": "device",
+			"common": {
+				"name": "My Places",
+				"desc": "Custom places apart from Life360."
+			},
+			"native": {}
+		}
+	]
 }

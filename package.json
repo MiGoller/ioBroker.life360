@@ -1,74 +1,89 @@
 {
-    "name": "iobroker.life360",
-    "version": "0.2.18",
-    "description": "An ioBroker adapter for Life360.",
-    "author": {
-        "name": "migoller",
-        "email": "goller.michael@gmail.com"
-    },
-    "homepage": "https://github.com/MiGoller/ioBroker.life360",
-    "license": "MIT",
-    "keywords": [
-        "ioBroker",
-        "template",
-        "Smart Home",
-        "home automation"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/MiGoller/ioBroker.life360"
-    },
-    "dependencies": {
-        "@iobroker/adapter-core": "^2.6.0",
-        "bluebird": "^3.7.2",
-        "geolocation-utils": "^1.2.5",
-        "request": "^2.88.2",
-        "retry-request": "^4.2.2"
-    },
-    "devDependencies": {
-        "@alcalzone/release-script": "^2.2.2",
-        "@iobroker/adapter-dev": "^1.0.0",
-        "@iobroker/testing": "^3.0.2",
-        "@types/chai": "^4.3.1",
-        "@types/chai-as-promised": "^7.1.5",
-        "@types/mocha": "^9.1.1",
-        "@types/node": "^14.18.21",
-        "@types/proxyquire": "^1.3.28",
-        "@types/sinon": "^10.0.11",
-        "@types/sinon-chai": "^3.2.8",
-        "chai": "^4.3.6",
-        "chai-as-promised": "^7.1.1",
-        "eslint": "^8.17.0",
-        "mocha": "^10.0.0",
-        "proxyquire": "^2.1.3",
-        "sinon": "^14.0.0",
-        "sinon-chai": "^3.7.0",
-        "typescript": "~4.5.5"
-    },
-    "main": "main.js",
-    "files": [
-        "admin{,/!(src)/**}/!(tsconfig|tsconfig.*).json",
-        "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
-        "lib/",
-        "www/",
-        "io-package.json",
-        "LICENSE",
-        "main.js"
-    ],
-    "scripts": {
-        "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
-        "test:package": "mocha test/package --exit",
-        "test:unit": "mocha test/unit --exit",
-        "test:integration": "mocha test/integration --exit",
-        "test": "npm run test:js && npm run test:package",
-        "check": "tsc --noEmit -p tsconfig.check.json",
-        "lint": "eslint",
-        "translate": "translate-adapter",
-        "release": "release-script",
-        "debug": "nodemon --inspect-brk ./main.js --debug 0"
-    },
-    "bugs": {
-        "url": "https://github.com/MiGoller/ioBroker.life360/issues"
-    },
-    "readmeFilename": "README.md"
+  "name": "iobroker.life360",
+  "version": "0.5.0",
+  "description": "An open source ioBroker adapter for Life360",
+  "author": {
+    "name": "MiGoller",
+    "email": "migoller@mail.de"
+  },
+  "homepage": "https://github.com/MiGoller/ioBroker.life360",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "life360",
+    "Smart Home",
+    "home automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiGoller/ioBroker.life360.git"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.0.3"
+  },
+  "devDependencies": {
+    "@alcalzone/release-script": "^3.6.0",
+    "@alcalzone/release-script-plugin-iobroker": "^3.6.0",
+    "@alcalzone/release-script-plugin-license": "^3.5.9",
+    "@alcalzone/release-script-plugin-manual-review": "^3.5.9",
+    "@iobroker/adapter-dev": "^1.2.0",
+    "@iobroker/dev-server": "^0.6.0",
+    "@iobroker/testing": "^4.1.0",
+    "@tsconfig/node16": "^16.1.0",
+    "@types/chai": "^4.3.5",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^16.18.39",
+    "@types/proxyquire": "^1.3.28",
+    "@types/sinon": "^10.0.16",
+    "@types/sinon-chai": "^3.2.9",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.0.1",
+    "proxyquire": "^2.1.3",
+    "rimraf": "^5.0.1",
+    "sinon": "^15.2.0",
+    "sinon-chai": "^3.7.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.0.4"
+  },
+  "main": "build/main.js",
+  "files": [
+    "admin{,/!(src)/**}/!(tsconfig|tsconfig.*|.eslintrc).{json,json5}",
+    "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
+    "build/",
+    "www/",
+    "io-package.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "build-adapter ts",
+    "watch": "build-adapter ts --watch",
+    "prebuild:ts": "rimraf build",
+    "build:ts": "build-adapter ts",
+    "watch:ts": "build-adapter ts --watch",
+    "test:ts": "mocha --config test/mocharc.custom.json src/**/*.test.ts",
+    "test:package": "mocha test/package --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:ts && npm run test:package",
+    "check": "tsc --noEmit",
+    "lint": "eslint --ext .ts src/",
+    "translate": "translate-adapter",
+    "release": "release-script"
+  },
+  "bugs": {
+    "url": "https://github.com/MiGoller/ioBroker.life360/issues"
+  },
+  "readmeFilename": "README.md"
 }

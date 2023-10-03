@@ -24,7 +24,7 @@
     "geolocation-utils": "^1.2.5",
     "request": "^2.88.2",
     "retry-request": "^4.2.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^3.6.0",

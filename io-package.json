@@ -1,8 +1,11 @@
 {
     "common": {
         "name": "life360",
-        "version": "0.2.21",
+        "version": "0.2.22",
         "news": {
+            "0.2.22": {
+                "en": "Fix for issue #83: Verbindungsproblem 20.12.23 Check your credentials!"
+            },
             "0.2.21": {
                 "en": "Fix for issue #76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. Überprüfen Sie Ihre Anmeldedaten!",
                 "de": "Fix für Problem Nr. 76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. ",

@@ -57,6 +57,9 @@
     "lint": "eslint",
     "debug": "nodemon --inspect-brk ./main.js --debug 0",
     "dev-server": "dev-server",
+    "dev-server:watch": "dev-server watch default",
+    "dev-server:debug": "dev-server debug default",
+    "dev-server:upload": "dev-server upload default",
     "release": "release-script"
   },
   "bugs": {

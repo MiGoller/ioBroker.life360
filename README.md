@@ -125,6 +125,11 @@ Feel free to modify the default timespan of 60 seconds for the polling interval.
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+
+- (MiGoller) Fix for issue [#83 Verbindungsproblem 20.12.23 Check your credentials!](https://github.com/MiGoller/ioBroker.life360/issues/83) .
+
 ### 0.2.21 (2023-08-01)
 
 - (MiGoller) Fix for issue [#76: Die Verbindung wurde hergestellt, die Authentifizierung konnte jedoch nicht durchgeführt werden. Überprüfen Sie Ihre Anmeldedaten!](https://github.com/MiGoller/ioBroker.life360/issues/76)
